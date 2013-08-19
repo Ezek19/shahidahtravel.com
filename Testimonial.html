@@ -1,0 +1,692 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Shahidah Travel & Tours Pte Ltd</title>
+<meta name="keywords" content="shahidah travel, Umrah & Haji, Go Easy Holiday, Easy Ticket, Honeymoon, Singapore Inbound, Badal Haji, Aqiqah&Korban, Perjalanan Suci, Singapore Hajj News, ST&T" />
+<meta name="description" content="Mesra & Amanah" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-translate-customization" content="4f319f2e9f5d3e1b-04a7941baa3ff161-gfb4d96411305c17f-17"></meta>
+
+<link rel="stylesheet" href="css/styles.css" type="text/css" />
+<link rel="stylesheet" href="css/hoteljemaah.css" type="text/css" />
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="lib/jquery-1.10.1.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 2
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			/*
+			 *  Open manually
+			 */
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+		});
+	</script>
+	<style type="text/css">
+		.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #222;
+		}
+
+		
+	</style>
+    <style type="text/css">
+	
+	.style2 {color: #000000}
+.style3 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style8 {
+	color: #FFFFFF;
+	font-size: 12px;
+}
+.style9 {
+	color: #000;
+	font-size: 20px;
+	font-weight: bold;
+}
+.style10 {
+	color: #060;
+	font-size: 24px;
+	font-weight: bold;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+}
+.style11 {
+	color: #930;
+	font-size: 16px;
+	font-weight: bold;
+}
+.style12 {
+	color: #000;
+	font-size: 12px;
+
+}
+</style>
+	
+	
+	
+</head>
+
+<body>
+<div id="pageWrapper">
+
+<!--HEADER START-->
+<div id="header">
+
+
+<div id="logo"><a href="index.html"><img src="images/logo.png" width="175px" /></a></div>
+<div id="box">
+<div id="social_button"><a href="https://www.facebook.com/masyarakat.shahidah"><img src="images/facebook.png" width="40px" /></a>&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/shahidahtravel"><img src="images/twitter.png" width="40px" /></a></div>
+<div class="clr"></div>
+<div class="button2">&nbsp;</div>
+<div class="button"><a class="fancybox fancybox.iframe" href="feedback.html"><img src="images/feedback2.png" width="120px" /></a></div>
+<div class="button"><a class="fancybox fancybox.iframe" href="newsletter.html"><img src="images/newsletter.png" width="120px" /></a></div>
+</div>
+<div id="header_text">390 Victoria Street, #01-26/30 Golden Landmark<br />
+Singapore 188061<br />
+Tel: (+65) 6299 2345 (Haj/Umrah) / <br />
+(+65) 6291 4555 (Tours/Ticketing)<br />
+Fax: (65) 6299 1235<br />
+Email: enquiry@shahidahtravel.com<br />
+</div>
+<div id="qr_code"><img src="images/qrcode.png" width="100px" /></div>
+
+</div>
+<div class="clr"></div>
+
+<!--HEADER END-->
+
+
+<!--MENU START-->
+
+<div id="nav">
+
+<ul id="menu">
+    <li><a href="index.html"><img src="images/home.jpg" width="199px" /></a></li>
+    
+    <li><a href="#"><img src="images/umrahnhaji.jpg" width="199px" /></a>
+        <ul>
+        
+        	<li><a href="#"><img src="images/umrah.png" width="199px" /></a></li>
+                
+                    <li><a href="umrahpackage.html"><img src="images/packageumrah.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/roominglist.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/umrahmove.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/umrahcourse.png" width="199px" /></a></li>
+                    <li><a href="hoteljemaah.html"><img src="images/hoteljemaah.png" width="199px" /></a></li>
+                    <li><a href="wisata.html"><img src="images/wisata.png" width="199px" /></a></li>
+                    <li><a href="umrahgallery.html"><img src="images/umrahgallery.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/registerumrah.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/testimonialumrah.png" width="199px" /></a></li>
+             	
+            
+            
+            <li><a href="#"><img src="images/haji.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/packagehaji.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/hajirooming.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/hajicourse.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/registerhaji.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/testimonialhaji.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/hajimovement.png" width="199px" /></a></li>
+            
+            <li><a href="#"><img src="images/baitulmaqdis.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/keistimewaanbaitulmaqdis.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/kenapa.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/umatislam.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/video.png" width="199px" /></a></li>
+        </ul>
+    </li>
+    <li><a href="#"><img src="images/goeasy.jpg" width="199px" /></a>
+        <ul>
+            <li><a href="#"><img src="images/goeasy-packages.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/testimonial-easy.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/galleryholiday.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/goeasy-register.png" width="199px" /></a></li>
+            
+        </ul>
+    </li>
+    <li><a href="http://www.easytickets.com.sg/"><img src="images/easytickets.jpg" width="199px" /></a>
+        
+    </li>
+    <li><a href="http://honeymoonparadise.com.sg/"><img src="images/honeymoon.jpg" width="199px" /></a>
+        
+    </li>
+    <li><a href="#"><img src="images/singaporeinbound.jpg" width="199px" height="37" /></a>
+        
+        <ul>
+            <li><a href="#"><img src="images/2togo.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/sgboundgroup.png" width="199px" height="37" /></a></li>
+                    
+        </ul>
+        
+    </li>
+     
+ 
+    <li><a href="http://www.perjalanansuci.com/"><img src="images/perjalanansuci.jpg" width="199px" height="37" /></a>
+        
+    </li>
+    
+    <li><a href="#"><img src="images/badalhaji.jpg" width="199px" height="37" /></a>
+        <ul>        	
+            <li><a href="#"><img src="images/keistimewaanbadal.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/pendaftaranbadal.png" width="199px" /></a></li>
+        </ul>
+    </li>
+    
+     <li><a href="#"><img src="images/aqiqahnqurban.jpg" width="199px" height="37" /></a>
+        <ul>
+            <li><a href="#"><img src="images/aqiqah.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/maksudaqiqah.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/pendaftaranaqiqah.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/asalusulqurban.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/qurban.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/panduanqurban.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/pendaftaranqurban.png" width="199px" /></a></li>
+        </ul>
+    </li>
+    
+     <li><a href="http://www.stntinternational.com/"><img src="images/stnt.jpg" width="199px" height="37" /></a>
+        
+    </li>
+    
+    <li><a href="http://www.singaporehajjnews.com/"><img src="images/singhajinews.jpg" width="199px" height="37" /></a>
+        
+    </li>
+    
+    <li><a href="#"><img src="images/aboutus.jpg" width="199px" height="37" /></a>
+        <ul>
+            <li><a href="#"><img src="images/companyprofile.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/pengasas.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/otherssay.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/callus.png" width="199px" /></a></li>        
+        </ul>
+    </li>   
+    
+</ul>
+
+</div>
+
+<!--MENU END-->
+
+<div class="clr"></div>
+<!--CONTENT START-->
+<div id="content">
+<div id="package">
+
+<td width="720">
+													<center><p>
+														<br />
+														<br />
+                                                        
+														<font style="font-family:Arial, Helvetica, sans-serif; color:#FFFFFF; font-size:24px; font-weight:bold;">What Others Say</font></p>
+                                                        </center>
+													<p>&nbsp;
+														</p>
+													<p style="text-align: center;">
+														<img alt="" src="/public/scripts/kcfinder/upload/images/good%20feedback.jpg" style="width: 650px; height: 718px;" /></p>
+													<p>&nbsp;
+														</p>
+													<center>
+														<img alt="" src="/public/scripts/kcfinder/upload/images/compliment.jpg" style="width: 700px; height: 871px;" /></p>
+													</center>
+														<br />
+														&nbsp;</p>
+													<center>
+														<table border="0" width="655">
+															<tbody>
+																<tr valign="top">
+																	<td align="center">
+																		<img alt="" src="../public/images/card2.jpg" width="650" /></td>
+																</tr>
+																<tr valign="top" bgcolor="#FFFFFF">
+																	<td>
+																		<p>
+																			<strong>Feedback dari Jemaah Haji pakej 25 hari</strong></p>
+																		<p>
+																			Hjh Suzana Shariff : &quot; Saya sangat gembira dengan service yang di berikan oleh Shahidah Travel, saya cukup berpuas hati dgn layanan yang baik &amp; mesra diberikan oleh pegawai Shahidah, mereka banyak menelong saya semasa saya berada di bangunan Shisha. Service ALHAMDULILLAH sangat memuaskan. &quot;</p>
+																		<p>
+																			Hj Mustafa Yahaya : &quot; Kami sangat - sangat bernasib baik kerana kami dapat mengguna ambulance daripada Hospital di Makkah untuk membawa keluar Isteri saya dgn keadaan tenat semasa itu. Jika tiada service ambulance yang diberikan semasa itu agak sukar bagi keadaan dia. Saya sangat berpuas hati dgn layanan di berikan oleh Shahidah Travel. Jika ada jemaah - jemaah yang berada dalam keadaan sama seperti kami saya shorkan untuk mengambil service Shahidah dan mendapat khidmat yang baik oleh Shahidah. Alhamdulillah kami sangat-sangat berpuas hati dengan semua bantuan dan rancangan yang diaturkan untuk kami. Terima kasih &quot;</p>
+																		<p>
+																			Hjh Idhawati Mohamed Kamari &quot; Saya sangat berpuas hati dgn service yang diberikan oleh Shahidah Travel terutama Pegawai Mustakimah yang menolong kami sekeluarga semasa kami sakit di sana. Bangunan Shisha sangat bagus dan hotel di Makkah (Dar Tawhid Intercontinental Hotel) &amp; Madinah (Oberoi Hotel) sangat bagus. &quot;</p>
+																		<p>
+																			Hj Syed Abdullah bin Ahmad &quot; Service di Makkah Hilton sangat memuaskan. Saya sangat suka idea yang dicadangkan oleh pihak Shahidah untuk membawa tukang masak dari Singapura untuk memasak juadah makanan dari Singapura/ Malaysia. Pegawai Shahidah sangat membantu kami. Saya syorkan untuk ikuti Shahidah jika mahu ke Umrah dan Haji. &quot;</p>
+																		<p>&nbsp;
+																			</p>
+																	</td>
+																</tr>
+																<tr valign="top" bgcolor="#FFFFFF">
+																	<td>
+																		It has been two weeks since our return from Umrah Jun 2012. I am very pleased and satisfied with the service provided by Shahidah and would recommend it widely to All. My family of four consisting of two children, 3 &amp; 8, were well-taken care of and the guiding Ustazs were excellent and helpful. Though we had experience Umrah with other agency, Shahidah Travel is without doubt the <b>BEST IN TOWN!! </b>The sincerity in providing quality service differs Shahidah from the rest and we really thank you for that. Thank U Shahidah Travel.<br />
+																		<em class="style1">From :Sahruddin Shani. Reference: <a href="javascript:void( window.open('http://www.jotform.com/form/13462903503', 'blank','scrollbars=yes,toolbar=no,width=600,height=550'))">Form Feedback</a> Shahidah Travel. </em></td>
+																</tr>
+																<tr valign="top">
+																	<td align="center">
+																		<img alt="" height="1" src="../public/images/Line.gif" width="400" /></td>
+																</tr>
+																<tr valign="top" bgcolor="#FFFFFF">
+																	<td>
+																		Assalamualaikum Shahidah,<br />
+																		<br />
+																		Salam.Saya dan isteri ingin mengucapkan terima kasih kepada pegawai Shahidah, Hajah Mariam yang banyak membantu isteri saya ketika mengerjakan umrah baru-baru ini.<br />
+																		<br />
+																		Hajjah Mariam sentiasa mengambil berat tentang keperluan jemaah beliau dan jugak isteri saya.<br />
+																		<br />
+																		Sekali lagi,ucapan terima kaseh kepada Hajjah Maraim dan jugak kepada SHAHIDAH Travel.<br />
+																		<em class="style1">From :Din &amp; Yani. Reference: <a href="javascript:void( window.open('http://www.jotform.com/form/13462903503', 'blank','scrollbars=yes,toolbar=no,width=600,height=550'))">Form Feedback</a> Shahidah Travel. </em></td>
+																</tr>
+																<tr valign="top">
+																	<td align="center">
+																		<img alt="" height="1" src="../public/images/Line.gif" width="400" /></td>
+																</tr>
+																<tr valign="top" bgcolor="#FFFFFF">
+																	<td>
+																		Assalamualaikum Shahidah,<br />
+																		<br />
+																		The Ismail family would like to thank you for all the hard work when guiding us to umrah on the 07/03-17/03/12. We are very satisfied with the tour, infact we learnt alot and looking forward for our incoming trip to there. Specially thank to Ustaz Haji Aziz, Ustaz Haji Ismail and his wife and also Cik Roz that help with the paperworks.<br />
+																		<br />
+																		Ya Allah, It was really the best trip ever for me and my family. Alhamdullilah we manage to finish it smoothly without any hiccups. The USTAZ(S) memang gerek! We learnt alot. Insyallah, Kita kan ke sana lagi and really looking forward to see all of you again :) Assalamualaikum<br />
+																		<em class="style1">From :Nur Rufaidah Binte Mohamed Ismail. Reference: <a href="javascript:void( window.open('http://www.jotform.com/form/13462903503', 'blank','scrollbars=yes,toolbar=no,width=600,height=550'))">Form Feedback</a> Shahidah Travel. </em></td>
+																</tr>
+																<tr valign="top">
+																	<td align="center">
+																		<img alt="" height="1" src="../public/images/Line.gif" width="400" /></td>
+																</tr>
+																<tr valign="top" bgcolor="#FFFFFF">
+																	<td>
+																		&quot;I miss Mekkah n Madinah so much.Ya ALLAH please let me go there again.&quot;&nbsp;&nbsp;<br />
+																		<em class="style1">From :Hannah Shereen, Reference Facebook on page Shahidah Travel. </em> <em class="style1"><a href="https://www.facebook.com/photo.php?fbid=349425848442654&amp;set=a.349426845109221.94401.100001257248498&amp;type=3&amp;theater" title="Click here to see the original feedback">See the original</a></em></td>
+																</tr>
+																<tr valign="top">
+																	<td align="center">
+																		<img alt="" height="1" src="../public/images/Line.gif" width="400" /></td>
+																</tr>
+																<tr valign="top" bgcolor="#FFFFFF">
+																	<td>
+																		To: Hjh Rozy &amp; Hjh Zaiton-Shahidah Travel&amp;Tours Pte Ltd<br />
+																		&quot;This is just a token of appreciation to Shahidah especially to both of your outstanding staff Hajah Rozy &amp; Hajah Zaiton for the guidance, patience and understanding prior to our departure for our Umrah on 8 Mar 2012. Our deepest sincere thanks to Hajah Zaiton who shows great patience in handling 37 umrah&#39;s jemaah that departed from Singapore on 8 Mar 2012, six of us be wheel chaired throughout the period.<br />
+																		<br />
+																		She ensured the smooth transfer of our wheelchaired mum during transit at Abu Dhabi, hence we were able to proceed without worrying much about her. Hajah Zaiton showed great leadership qualities, patiende in handling diffrent jemaah&#39;s needs.<br />
+																		<br />
+																		Her guidance to first timers were remarkable. She had indeed made our stay in both Madinah &amp; Mekah a memorable one. We believe other jemaah would agree that we were able to perform our Umrah with ease with the guidance and patience from all staffs involved in booth Madinah &amp; Mekah (Hj Ehsan, Ust Salam, Ust Helmi and all those that we could not list their names here).<br />
+																		<br />
+																		May Allah SWT blessed all of you. Last but not least <b><em>&quot;THANK YOU SHAHIDAH&quot;</em></b> and we look foward to being with you again in our Haji/Umrah package in near future, insya Allah.&quot;&nbsp;&nbsp;<br />
+																		<em class="style1">From :(Omar&#39;s Family Kalsom Abdullah (Mother), Mohd Kassim Omar, Maimunah Omar &amp; Husband (Sahbudin), Rahimah Omar, Zoyyah Omar), Reference Shahidah Travel. </em> <em class="style1"><a href="../public/images/UMRAH/TESTIMONIAL/Testimonial Bunga.jpg" title="Click here to see the original feedback">See the original</a></em></td>
+																</tr>
+																<tr valign="top">
+																	<td align="center">
+																		<img alt="" height="1" src="../public/images/Line.gif" width="400" /></td>
+																</tr>
+																<tr valign="top" bgcolor="#FFFFFF">
+																	<td>
+																		&quot;My wife &amp; I are indeed pleased with the stirling service provided by Shahidah Travels during the recent Hajj. Despite the constraints posed by the lack of officials to serve the pilgrims, its MD, Tn Hj Ayoob has personally helped in ensuring that the needs of the pilgrims are attended to conscientiously! Thank you !&quot;&nbsp;&nbsp; <em class="style1">From :(Abdullah Hussain), Reference Shahidah Travel. </em></td>
+																</tr>
+																<tr valign="top">
+																	<td align="center">
+																		<img alt="" height="1" src="../public/images/Line.gif" width="400" /></td>
+																</tr>
+																<tr valign="top" bgcolor="#FFFFFF">
+																	<td>
+																		&quot;Alhamdulilah.<br />
+																		My special thanks to Hj Ayoob and the Shahidah Haji Operational Group, especially Hjh Rosi, Hjh Yati, Hj Ibrahim, Hj Masrani, Hj Yahya, Ust Abdul Salam, Ust Salman, Ust Baharudin and Ust Yusoff for the outstanding commitment and support. I personality received during my recent haji trip (Oct/Nov 2011).<br />
+																		<br />
+																		I shall remain deeply indebted to all forever for making the trip really satisfying and fulfilling, both physically and spiritually. May Allah bless and reward you all.&quot;&nbsp;&nbsp; <em class="style1">From :(Norashikin Abu Hassan), Reference Shahidah Travel. <b><a href="../public/images/FEEDBACK/Feedback.gif" title="Click here to see the original feedback">See the original</a></b></em></td>
+																</tr>
+																<tr valign="top">
+																	<td align="center">
+																		<img alt="" height="1" src="../public/images/Line.gif" width="400" /></td>
+																</tr>
+																<tr valign="top" bgcolor="#FFFFFF">
+																	<td>
+																		&quot;Ucapan jutaan terima kasih kepada Shahidah Travel yang menjadikan umrah saya sekeluarga pada <strong>6/6-15/6/2011</strong> sangat menyenangkan. Bimbingan ustaz-ustaz serta pegawai-pegawai di Singapura mahupun di Mekah dan Medina amat dihargai. Yang pasti, ini bukan kali yang terakhir keluarga saya akan menggunakan perkhidmatan yang berkualiti tinggi. Kali pertama 2010 perkhidmatan yang sangat memuaskan dan 2011, prestasi yang baik dan berkualiti serta yang akan datang.....TERIMAKASIH Hj Ayob atas memberikan perkhidmatan yang STAR JEWELS!!! salam sayang Cikgu Samsiah sekeluarga.&quot;&nbsp;&nbsp; <em class="style1">From :(MIRA SHERMAN), Reference Facebook Shahidah Travel</em></td>
+																</tr>
+																<tr valign="top">
+																	<td align="center">
+																		<img alt="" height="1" src="../public/images/Line.gif" width="400" /></td>
+																</tr>
+																<tr valign="top" bgcolor="#FFFFFF">
+																	<td>
+																		Saya amat berpuas hati dgn Hajjah Mariam (pegawai) dengan cara mengatur acara harian dan jawapan yang diberikan sangat memuaskan Terima kasih <em class="style1">From : Jemaah Bulan Jun, Reference Facebook Shahidah Travel</em></td>
+																</tr>
+																<tr valign="top">
+																	<td align="center">
+																		<img alt="" height="1" src="../public/images/Line.gif" width="400" /></td>
+																</tr>
+																<tr valign="top" bgcolor="#FFFFFF">
+																	<td>
+																		Saya sangat berpuas hati dengan layanan dan Khidmat yang diberikan oleh semua pegawai Shahidah. Terutama skali kepada pegawai saya Haji Salleh dan Hajjah Zaitoon. Mereka banyak membantu sepanjang Umrah saya dan isteri. <em class="style1">From : Jemaah, Reference notes submit to Shahidah Travel</em></td>
+																</tr>
+																<tr valign="top">
+																	<td align="center">
+																		<img alt="" height="1" src="../public/images/Line.gif" width="400" /></td>
+																</tr>
+																<tr valign="top" bgcolor="#FFFFFF">
+																	<td>
+																		Alhamdulilah kepada Allah Swt yang telah membawa kami ke tanah suci Makkah dan Madinah. Kami benar-benar bersyukur, gembira kerana dapat mengerjakan ibadah umrah semasa di makkah dengan sempurna.<br />
+																		<br />
+																		Bimbingan dari ustaz-ustaz di sini serta bantuan dan dari pegawai Shahidah terutamanya kakak Hajjah Kamisah yang peramah dan berdedikasi pada setiap jemaah Shahidah kumpulan biru.<br />
+																		<br />
+																		Kami dengan ikhlasnya ingin mengucapkan ribuan terima kasih kepada anda.<br />
+																		<em class="style1">From : Norkiah dan Nazri, Saliha. Hajjah Kamisah, Kumpulan Biru (Shahidah)</em></td>
+																</tr>
+																<tr valign="top">
+																	<td align="center">
+																		<img alt="" height="1" src="../public/images/Line.gif" width="400" /></td>
+																</tr>
+																<tr valign="top">
+																	<td>
+																		<img alt="" height="650" src="../public/images/UMRAH/TESTIMONIAL/Testimonial Bunga.jpg" width="600" /></td>
+																</tr>
+																<tr valign="top">
+																	<td>&nbsp;
+																		</td>
+																</tr>
+															</tbody>
+														</table>
+													</center>
+												</td>
+                                                
+</div>
+</div>
+<div class="clr"></div>
+
+<!--CONTENT END-->
+
+<!--FOOTER START-->
+
+<div id="sub_footer">
+
+<div class="footerMenu_block">
+<div class="title">UMRAH & HAJI</div>
+<div class="nd_title">&nbsp;Umrah</div>
+<div class="rd_title"><a href="umrahpackage.html" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Package Umrah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Rooming List</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Umrah Movement</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Umrah Course</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Hotel Jemaah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Wisata</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Umrah Gallery</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Register Umrah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Testimonial Umrah</font></a></div>
+
+<div class="nd_title">&nbsp;Haji</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Package Haji</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Rooming List</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Haji Course</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Register Haji</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Testimonial Haji</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Hajj Movement</font></a></div>
+</div>  
+
+<div class="footerMenu_block2">
+
+<div class="title">&nbsp;</div>
+<div class="nd_title">&nbsp;Baitulmaqdis</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Keistimewaan Baitulmaqdis</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Kenapa kita perlu ziarah Baitulmaqdis?</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Umat Islam digesa ziarah Baitulmaqdis</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Video Baitulmaqdis</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title">&nbsp;</div>
+<div class="title">GO EASY HOLIDAY</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Packages</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Testimonial</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Gallery Holiday</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Register</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title"><a href="http://www.easytickets.com.sg/" style="text-decoration:none"><font color="#FFFFFF">EASY TICKETS</font></a></div>
+<div class="title">&nbsp;</div>
+<div class="title"><a href="http://honeymoonparadise.com.sg/" style="text-decoration:none"><font color="#FFFFFF">HONEYMOON</font></a></div>
+
+</div>
+
+<div class="footerMenu_block2">
+
+<div class="title">SINGAPORE INBOUND</div>
+
+<div class="rd2_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;2 To Go</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Group</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title"><a href="http://www.perjalanansuci.com/" style="text-decoration:none"><font color="#FFFFFF">PERJALANAN SUCI</font></a></div>
+<div class="title">&nbsp;</div>
+<div class="title">BADAL HAJI</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Keistimewaan badal Haji</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Pendaftaran badal Haji</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title">AQIQAH & QURBAN</div>
+<div class="nd_title">&nbsp;Aqiqah</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Maksud Aqiqah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Pendaftaran Aqiqah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Asal Usul Korban</font></a></div>
+<div class="nd_title">&nbsp;Korban</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Panduan ibadah korban</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Pendaftaran korban</font></a></div>
+</div>
+
+<div class="footerMenu_block2">
+
+<div class="title"><a href="http://www.stntinternational.com/" style="text-decoration:none"><font color="#FFFFFF">ST & T</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title"><a href="http://www.singaporehajjnews.com/" style="text-decoration:none"><font color="#FFFFFF">SINGAPORE HAJJ NEWS</font></a></div>
+<div class="title">&nbsp;</div>
+<div class="title">ABOUT US</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Company Profile</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Pengasas Shahidah Travel</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;What others say</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Call us</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;</font></a></div>
+<div class="title"><a href="index.html" style="text-decoration:none"><font color="#FFFFFF">HOME</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;</font></a></div>
+<div class="rd_title"><font color="#FFFFFF" style="font-size:11px">390 Victoria Street, #01-26/30 Golden Landmark<br />
+Singapore 188061<br />
+Tel: (+65) 6299 2345 (Haj/Umrah) / <br />
+(+65) 6291 4555 (Tours/Ticketing)<br />
+Fax: (65) 6299 1235<br />
+Email: enquiry@shahidahtravel.com<br /></font></div>
+</div>
+  
+</div>
+
+
+<div id="footer">
+ <div id="footer_text"> Copyright 2013 All Rights Reserved. Di Bangunkan oleh: Shahidah Travel & Tours Pte Ltd</div>
+</div>
+</div>
+<center>
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'ms', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</center>
+</body>
+</html>

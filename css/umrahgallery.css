@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+
+  /* FOR UMRAH GALLERY */
+
+ .gallery {
+	display:block;
+	width:399px;
+    margin: 1px 1px 15px 0;
+    background: #0F140F;
+	float:left;
+  }
+  
+   .gallery2 {
+	display:block;
+	width:800px;
+	height:399px;
+	background: #0F140F;
+    margin: 1px 0 15px 0;    
+	float:left;
+  }
+  
+  .gallery3 {
+	display:block;
+	width:399px;
+    margin: 1px 0 15px 1px;
+    background: #0F140F;
+	float:left;
+  }
+  .gallery4 {
+	display:block;
+	width:1200px;
+    margin: 1px 0 15px 1px;
+    background: #0F140F;
+	float:left;
+  }
+  
+   .gallery_header{
+	display:block;
+	width:1200px;
+    margin: 35px 1px 0 0;
+    background: #39483a;
+	float:left;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;	
+	font-weight:bold;
+	color:#fead00;
+	text-align:center;	
+	padding:5px 0;
+  }
+  
+  /* FOR GALLERY END */

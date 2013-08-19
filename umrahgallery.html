@@ -1,0 +1,1259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Shahidah Travel & Tours Pte Ltd</title>
+<meta name="keywords" content="shahidah travel, Umrah & Haji, Go Easy Holiday, Easy Ticket, Honeymoon, Singapore Inbound, Badal Haji, Aqiqah&Korban, Perjalanan Suci, Singapore Hajj News, ST&T" />
+<meta name="description" content="Mesra & Amanah" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-translate-customization" content="4f319f2e9f5d3e1b-04a7941baa3ff161-gfb4d96411305c17f-17"></meta>
+
+<link rel="stylesheet" href="css/styles.css" type="text/css" />
+<link rel="stylesheet" href="css/umrahgallery.css" type="text/css" />
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="lib/jquery-1.10.1.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			/*
+			 *  Open manually
+			 */
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+		});
+	</script>
+	<style type="text/css">
+		.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #222;
+		}
+		
+	</style>
+       
+</head>
+
+<body>
+<div id="pageWrapper">
+
+<!--HEADER START-->
+<div id="header">
+
+
+<div id="logo"><a href="index.html"><img src="images/logo.png" width="175px" /></a></div>
+<div id="box">
+<div id="social_button"><a href="https://www.facebook.com/masyarakat.shahidah"><img src="images/facebook.png" width="40px" /></a>&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/shahidahtravel"><img src="images/twitter.png" width="40px" /></a></div>
+<div class="clr"></div>
+<div class="button2">&nbsp;</div>
+<div class="button"><a class="fancybox fancybox.iframe" href="feedback.html"><img src="images/feedback2.png" width="120px" /></a></div>
+<div class="button"><a class="fancybox fancybox.iframe" href="newsletter.html"><img src="images/newsletter.png" width="120px" /></a></div>
+</div>
+<div id="header_text">390 Victoria Street, #01-26/30 Golden Landmark<br />
+Singapore 188061<br />
+Tel: (+65) 6299 2345 (Haj/Umrah) / <br />
+(+65) 6291 4555 (Tours/Ticketing)<br />
+Fax: (65) 6299 1235<br />
+Email: enquiry@shahidahtravel.com<br />
+</div>
+<div id="qr_code"><img src="images/qrcode.png" width="100px" /></div>
+
+</div>
+<div class="clr"></div>
+
+<!--HEADER END-->
+
+
+<!--MENU START-->
+
+<div id="nav">
+
+<ul id="menu">
+    <li><a href="index.html"><img src="images/home.jpg" width="199px" /></a></li>
+    
+    <li><a href="#"><img src="images/umrahnhaji.jpg" width="199px" /></a>
+        <ul>
+        
+        	<li><a href="#"><img src="images/umrah.png" width="199px" /></a></li>
+                
+                    <li><a href="umrahpackage.html"><img src="images/packageumrah.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/roominglist.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/umrahmove.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/umrahcourse.png" width="199px" /></a></li>
+                    <li><a href="hoteljemaah.html"><img src="images/hoteljemaah.png" width="199px" /></a></li>
+                    <li><a href="wisata.html"><img src="images/wisata.png" width="199px" /></a></li>
+                    <li><a href="umrahgallery.html"><img src="images/umrahgallery.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/registerumrah.png" width="199px" /></a></li>
+                    <li><a href="Testimonial.html"><img src="images/testimonialumrah.png" width="199px" /></a></li>
+             	
+            
+            
+            <li><a href="#"><img src="images/haji.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/packagehaji.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/hajirooming.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/hajicourse.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/registerhaji.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/testimonialhaji.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/hajimovement.png" width="199px" /></a></li>
+            
+            <li><a href="#"><img src="images/baitulmaqdis.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/keistimewaanbaitulmaqdis.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/kenapa.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/umatislam.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/video.png" width="199px" /></a></li>
+        </ul>
+    </li>
+    <li><a href="#"><img src="images/goeasy.jpg" width="199px" /></a>
+        <ul>
+            <li><a href="#"><img src="images/goeasy-packages.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/testimonial-easy.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/galleryholiday.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/goeasy-register.png" width="199px" /></a></li>
+            
+        </ul>
+    </li>
+    <li><a href="http://www.easytickets.com.sg/"><img src="images/easytickets.jpg" width="199px" /></a>
+        
+    </li>
+    <li><a href="http://honeymoonparadise.com.sg/"><img src="images/honeymoon.jpg" width="199px" /></a>
+        
+    </li>
+    <li><a href="#"><img src="images/singaporeinbound.jpg" width="199px" height="37" /></a>
+        
+        <ul>
+            <li><a href="#"><img src="images/2togo.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/sgboundgroup.png" width="199px" height="37" /></a></li>
+                    
+        </ul>
+        
+    </li>
+     
+ 
+    <li><a href="http://www.perjalanansuci.com/"><img src="images/perjalanansuci.jpg" width="199px" height="37" /></a>
+        
+    </li>
+    
+    <li><a href="#"><img src="images/badalhaji.jpg" width="199px" height="37" /></a>
+        <ul>        	
+            <li><a href="#"><img src="images/keistimewaanbadal.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/pendaftaranbadal.png" width="199px" /></a></li>
+        </ul>
+    </li>
+    
+     <li><a href="#"><img src="images/aqiqahnqurban.jpg" width="199px" height="37" /></a>
+        <ul>
+            <li><a href="#"><img src="images/aqiqah.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/maksudaqiqah.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/pendaftaranaqiqah.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/asalusulqurban.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/qurban.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/panduanqurban.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/pendaftaranqurban.png" width="199px" /></a></li>
+        </ul>
+    </li>
+    
+     <li><a href="http://www.stntinternational.com/"><img src="images/stnt.jpg" width="199px" height="37" /></a>
+        
+    </li>
+    
+    <li><a href="http://www.singaporehajjnews.com/"><img src="images/singhajinews.jpg" width="199px" height="37" /></a>
+        
+    </li>
+    
+    <li><a href="#"><img src="images/aboutus.jpg" width="199px" height="37" /></a>
+        <ul>
+            <li><a href="#"><img src="images/companyprofile.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/pengasas.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/otherssay.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/callus.png" width="199px" /></a></li>        
+        </ul>
+    </li>   
+    
+</ul>
+
+</div>
+
+<!--MENU END-->
+
+<div class="clr"></div>
+<!--CONTENT START-->
+<div id="content">
+
+<div class="gallery_header">
+UMRAH 2013
+</div>
+
+<div class="clr"></div>
+
+<div class="gallery">
+<iframe style="border:none" src="http://files.photosnack.com/iframejs/embed.html?hash=pdk9ejnk&t=1373963040" width="399px" height="399px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" ></iframe>
+</div>
+
+<div class="gallery2">
+
+<div style="height:400px;width:800px;font:12px/14px Arial, Helvetica, sans-serif; overflow: auto;">
+                        <table width="800" border="0">
+                        <!--23/11/2011 PAJ086-PAJ110 -->
+                        <tr>
+                            <td width="100"><a class="fancybox" href="http://i1280.photobucket.com/albums/a489/ezek191/Umrah2013/IMG-20130313-WA0004_zpsbaebaa00.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="http://i1280.photobucket.com/albums/a489/ezek191/Umrah2013/IMG-20130313-WA0004_zpsbaebaa00.jpg" alt="" width="95" height="75px" /></a></td>
+                            
+                            <td width="100"><a class="fancybox" href="http://i1280.photobucket.com/albums/a489/ezek191/Umrah2013/IMG-20130222-WA0000_zps8e6770ca.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="http://i1280.photobucket.com/albums/a489/ezek191/Umrah2013/IMG-20130222-WA0000_zps8e6770ca.jpg" alt="" width="95" height="75px" /></a></td>
+                            
+                            <td width="100"><a class="fancybox" href="http://i1280.photobucket.com/albums/a489/ezek191/Umrah2013/IMG-20130227-WA0000_zps163e3e7a.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="http://i1280.photobucket.com/albums/a489/ezek191/Umrah2013/IMG-20130227-WA0000_zps163e3e7a.jpg" alt="" width="95" height="75px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1280.photobucket.com/albums/a489/ezek191/Umrah2013/IMG-20130311-WA0000_zps2920e4ba.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1280.photobucket.com/albums/a489/ezek191/Umrah2013/IMG-20130311-WA0000_zps2920e4ba.jpg" alt="" width="95" height="75px" /></a></td>
+                             
+                             <td width="92"><a class="fancybox" href="http://i1280.photobucket.com/albums/a489/ezek191/Umrah2013/IMG-20130313-WA0002_zps30745f7e.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1280.photobucket.com/albums/a489/ezek191/Umrah2013/IMG-20130313-WA0002_zps30745f7e.jpg" alt="" width="95" height="75px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/scripts/kcfinder/upload/images/8.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/scripts/kcfinder/upload/images/8.jpg" alt="" width="95" height="75px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/scripts/kcfinder/upload/images/9.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/scripts/kcfinder/upload/images/9.jpg" alt="" width="95" height="75px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/scripts/kcfinder/upload/images/10.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/scripts/kcfinder/upload/images/10.jpg" alt="" width="95" height="75px" /></a></td>                
+                             
+                            </tr>
+                            
+                            <tr>
+                            
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/scripts/kcfinder/upload/images/11.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/scripts/kcfinder/upload/images/11.jpg" alt="" width="95" height="75px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/scripts/kcfinder/upload/images/12.JPG" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/scripts/kcfinder/upload/images/12.JPG" width="95" height="75px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/13.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/13.jpg" width="95" height="75px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/14.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/14.jpg" width="95" height="75px" /></a></td>
+                             
+                              <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/15.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/15.jpg" width="95" height="75px" /></a></td>
+                              
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/16.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/16.jpg" width="95" height="75px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/17.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/17.jpg" width="95" height="75px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/18.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/18.jpg" width="95" height="75px" /></a></td>
+                            </tr>
+                            
+                            <tr>
+                            
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/19.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/19.jpg" width="95" height="75px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/20.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/20.jpg" width="95" height="75px" /></a></td>
+                             
+                            <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/21.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/21.jpg" width="95" height="75px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/22.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/22.jpg" width="95" height="75px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/23.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/23.jpg" width="95" height="75px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/25.JPG" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/25.JPG" width="95" height="75px" /></a></td>
+                             
+                            <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/28.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/2013/28.jpg" width="95" height="75px" /></a></td>
+                            
+                             <td width="100">&nbsp;</td>
+                             
+                            </tr>
+                            
+                             <tr> 
+                             
+                             <td width="100">&nbsp;</td>
+                             <td width="100">&nbsp;</td>
+                            <td width="100">&nbsp;</td>
+                             <td width="100">&nbsp;</td>
+                              <td width="100">&nbsp;</td>
+                             <td width="100">&nbsp;</td>
+                            <td width="100">&nbsp;</td>
+                             <td width="100">&nbsp;</td>
+                             
+                            </tr>
+                            
+                             <tr> 
+                             
+                             <td width="92">&nbsp;</td>
+                             <td width="92">&nbsp;</td>
+                           <td width="92">&nbsp;</td>
+                           <td width="92">&nbsp;</td>
+                            <td width="92">&nbsp;</td>
+                             <td width="92">&nbsp;</td>
+                            <td width="92">&nbsp;</td>
+                             <td width="92">&nbsp;</td>
+                             
+                           </tr>
+                            </table>
+                      </div>   
+        
+</div>
+
+
+
+<div class="gallery_header">
+UMRAH MAY - JUNE 2012</div>
+
+<div class="clr"></div>
+
+<div class="gallery">
+<iframe src="http://files.photosnack.com/iframe/embed.html?hash=pzt5gl08&bgcolor=EEEEEE&wmode=window&t=1340103069" width="399" height="399" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+</div>
+
+<div class="gallery2">
+
+<div style="height:400px;width:800px;font:12px/14px Arial, Helvetica, sans-serif; overflow: auto;">
+                        <table width="800" border="0">
+                        <!--23/11/2011 PAJ086-PAJ110 -->
+                        <tr>
+                            <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/1%20JUN%2011HARI%20SQ%20COKLAT.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/1%20JUN%2011HARI%20SQ%20COKLAT.jpg" alt="" width="95" height="62px" /></a></td>
+                            
+                            <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/2%20JUN%2012HARI%20EY%20JINGGA.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/2%20JUN%2012HARI%20EY%20JINGGA.jpg" alt="" width="95" height="62px" /></a></td>
+                            
+                            <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/2%20JUN%2015HARI%20BMQ%20HIJAU.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/2%20JUN%2015HARI%20BMQ%20HIJAU.jpg" alt="" width="95" height="62px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/3%20JUN%2012HARI%20SQ%20MERAH%20JAMBU.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/3%20JUN%2012HARI%20SQ%20MERAH%20JAMBU.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="92"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/6%20JUN%2011HARI%20SQ%20B1.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/6%20JUN%2011HARI%20SQ%20B1.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/6%20JUN%2011HARI%20SQ%20B2.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/6%20JUN%2011HARI%20SQ%20B2.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/10%20JUN%2012HARI%20SQ%20UNGU.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/10%20JUN%2012HARI%20SQ%20UNGU.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/25%20MAY%209HARI%20SQ%20KUNING.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/25%20MAY%209HARI%20SQ%20KUNING.jpg" alt="" width="95" height="62px" /></a></td>                
+                             
+                            </tr>
+                            
+                            <tr>
+                            
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/26%20MAY%2012HARI%20EY%20BIRU.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/26%20MAY%2012HARI%20EY%20BIRU.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/29%20MAY%2015HARI%20ISTANBUL%20KELABU.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/29%20MAY%2015HARI%20ISTANBUL%20KELABU.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/30%20MAY%2011%20HARI%20SQ%20UNGU.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/30%20MAY%2011%20HARI%20SQ%20UNGU.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/31%20MAY%2011HARI%20EY%20MERAH.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/31%20MAY%2011HARI%20EY%20MERAH.jpg" width="95" height="62px" /></a></td>
+                             
+                              <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ012.jpg" width="95" height="62px" /></a></td>
+                              
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ013.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ013.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ014.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ014.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ015.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ015.jpg" width="95" height="62px" /></a></td>
+                            </tr>
+                            
+                            <tr>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ016.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ016.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ017.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ017.jpg" width="95" height="62px" /></a></td>
+                             
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ018.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ018.jpg" width="95" height="62px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ019.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ019.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ020.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ020.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar01.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar01.jpg" width="95" height="62px" /></a></td>
+                             
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar02.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar02.jpg" width="95" height="62px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar03.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar03.jpg" width="95" height="62px" /></a></td>
+                             
+                            </tr>
+                            
+                             <tr> 
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar05.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar05.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar06.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar06.jpg" width="95" height="62px" /></a></td>
+                             
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar07.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar07.jpg" width="95" height="62px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar08.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar08.jpg" width="95" height="62px" /></a></td>
+                             
+                              <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar09.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar09.jpg" width="95" height="62px" /></a></td>
+                              
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar010.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar010.jpg" width="95" height="62px" /></a></td>
+                             
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar011.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar011.jpg" width="95" height="62px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar012.jpg" width="95" height="62px" /></a></td>
+                             
+                            </tr>
+                            
+                             <tr> 
+                             
+                             <td width="92">&nbsp;</td>
+                             <td width="92">&nbsp;</td>
+                           <td width="92">&nbsp;</td>
+                           <td width="92">&nbsp;</td>
+                            <td width="92">&nbsp;</td>
+                             <td width="92">&nbsp;</td>
+                            <td width="92">&nbsp;</td>
+                             <td width="92">&nbsp;</td>
+                             
+                           </tr>
+                            </table>
+                      </div>   
+        
+</div>
+
+<div class="clr"></div>
+
+<div class="gallery_header">
+MAJLIS KESYUKURAN JEMAAH 6 APR 2012</div>
+
+<div class="clr"></div>
+
+<div class="gallery">
+<iframe src="http://files.photosnack.com/iframe/embed.html?hash=pztp0ncx&bgcolor=EEEEEE&wmode=window&t=1334054452" width="399" height="399" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+</div>
+
+<div class="gallery2">
+
+<div style="height:400px;width:800px;font:12px/14px Arial, Helvetica, sans-serif; overflow: auto;">
+                        <table width="800" border="0">
+                        <!--23/11/2011 PAJ086-PAJ110 -->
+                        <tr>
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/001.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/001.jpg" alt="" width="95" height="62px" /></a></td>
+                            
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/002.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/002.jpg" alt="" width="95" height="62px" /></a></td>
+                            
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/003.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/003.jpg" alt="" width="95" height="62px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/004.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/004.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/005.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/005.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/007.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/007.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/008.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/008.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/009.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/009.jpg" alt="" width="95" height="62px" /></a></td>                
+                             
+                            </tr>
+                            
+                            <tr>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/010.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/010.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/011.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/011.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/012.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/013.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/013.jpg" width="95" height="62px" /></a></td>
+                             
+                              <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/014.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/014.jpg" width="95" height="62px" /></a></td>
+                              
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/015.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/015.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/016.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/016.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/017.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/017.jpg" width="95" height="62px" /></a></td>
+                            </tr>
+                            
+                            <tr>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/018.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/018.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/019.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/019.jpg" width="95" height="62px" /></a></td>
+                             
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/020.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/020.jpg" width="95" height="62px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/021.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/021.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/023.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/023.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/024.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/024.jpg" width="95" height="62px" /></a></td>
+                             
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/026.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/026.jpg" width="95" height="62px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/027.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/027.jpg" width="95" height="62px" /></a></td>
+                             
+                            </tr>
+                            
+                             <tr> 
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/028.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/028.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/029.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/029.jpg" width="95" height="62px" /></a></td>
+                             
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/030.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/030.jpg" width="95" height="62px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/031.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/031.jpg" width="95" height="62px" /></a></td>
+                             
+                              <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/032.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/032.jpg" width="95" height="62px" /></a></td>
+                              
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/033.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/033.jpg" width="95" height="62px" /></a></td>
+                             
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/034.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/034.jpg" width="95" height="62px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/035.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/035.jpg" width="95" height="62px" /></a></td>
+                             
+                            </tr>
+                            
+                             <tr> 
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/036.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/036.jpg" width="95" height="62px" /></a></td>
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/037.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/037.jpg" width="95" height="62px" /></a></td>
+                           <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/038.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/038.jpg" width="95" height="62px" /></a></td>
+                           <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/039.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/039.jpg" width="95" height="62px" /></a></td>
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/040.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/040.jpg" width="95" height="62px" /></a></td>
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/041.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/041.jpg" width="95" height="62px" /></a></td>
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/042.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/042.jpg" width="95" height="62px" /></a></td>
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/043.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/043.jpg" width="95" height="62px" /></a></td>
+                             
+                           </tr>
+                           
+                           <tr> 
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/044.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/044.jpg" width="95" height="62px" /></a></td>
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/045.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/045.jpg" width="95" height="62px" /></a></td>
+                           <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/046.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/046.jpg" width="95" height="62px" /></a></td>
+                           <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/047.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/047.jpg" width="95" height="62px" /></a></td>
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/048.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/048.jpg" width="95" height="62px" /></a></td>
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/049.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/049.jpg" width="95" height="62px" /></a></td>
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/050.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/050.jpg" width="95" height="62px" /></a></td>
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/051.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/051.jpg" width="95" height="62px" /></a></td>
+                             
+                           </tr>
+                           
+                           <tr> 
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/052.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/052.jpg" width="95" height="62px" /></a></td>
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/053.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/053.jpg" width="95" height="62px" /></a></td>
+                           <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/054.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/054.jpg" width="95" height="62px" /></a></td>
+                           <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/057.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/057.jpg" width="95" height="62px" /></a></td>
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/058.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/058.jpg" width="95" height="62px" /></a></td>
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/059.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/059.jpg" width="95" height="62px" /></a></td>
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/060.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/060.jpg" width="95" height="62px" /></a></td>
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/061.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/Majlis%20Kesyukuran%20Jemaah%206%20Apr%202012/061.jpg" width="95" height="62px" /></a></td>
+                             
+                           </tr>
+                            </table>
+                      </div>   
+        
+</div>
+
+<div class="gallery_header">
+Group Photo Jemaah Keberangkatan 8 March di Baitulmaqdis</div>
+
+
+<div class="gallery4">
+<center>
+<img src="images/8MAR.jpg" width="800px" />
+</center>
+</div>
+
+<div class="clr"></div>
+
+<div class="gallery_header">
+UMRAH MAR 2012</div>
+
+<div class="clr"></div>
+
+<div class="gallery">
+<iframe src="http://files.photosnack.com/iframe/embed.html?hash=pupiqhxr&bgcolor=EEEEEE&wmode=window&t=1333353948" width="399" height="399" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+</div>
+
+<div class="gallery2">
+
+<div style="height:400px;width:800px;font:12px/14px Arial, Helvetica, sans-serif; overflow: auto;">
+                        <table width="800" border="0">
+                        <!--23/11/2011 PAJ086-PAJ110 -->
+                        <tr>
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/GRPBIRU11HariUmrahMakkahMadinah.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/GRPBIRU11HariUmrahMakkahMadinah.jpg" alt="" width="95" height="62px" /></a></td>
+                            
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ01.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ01.jpg" alt="" width="95" height="62px" /></a></td>
+                            
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ02.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ02.jpg" alt="" width="95" height="62px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ03.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ03.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ04.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ04.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ05.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ05.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ06.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ06.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ07.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ07.jpg" alt="" width="95" height="62px" /></a></td>                
+                             
+                          </tr>
+                            
+                            <tr>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ08.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ08.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ09.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ09.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ010.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ010.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/31%20MAY%2011HARI%20EY%20MERAH.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://www.shahidahtravel.com/public/images/UMRAH/PIC%20UMRAH/MAY%20-%20JUN%202013/31%20MAY%2011HARI%20EY%20MERAH.jpg" width="95" height="62px" /></a></td>
+                             
+                              <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ011.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ011.jpg" width="95" height="62px" /></a></td>
+                              
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ012.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ013.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ013.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ014.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ014.jpg" width="95" height="62px" /></a></td>
+                            </tr>
+                            
+                            <tr>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ015.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ015.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ016.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ016.jpg" width="95" height="62px" /></a></td>
+                             
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ017.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ017.jpg" width="95" height="62px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ018.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ018.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ019.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ019.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ020.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/21MAR%2011H%20UMRAH%20GROUP%20BIRU/21MAR11DSQ020.jpg" width="95" height="62px" /></a></td>
+                             
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar02.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar02.jpg" width="95" height="62px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar03.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar03.jpg" width="95" height="62px" /></a></td>
+                             
+                            </tr>
+                            
+                             <tr> 
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar05.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar05.jpg" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar06.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar06.jpg" width="95" height="62px" /></a></td>
+                             
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar07.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar07.jpg" width="95" height="62px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar08.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar08.jpg" width="95" height="62px" /></a></td>
+                             
+                              <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar09.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar09.jpg" width="95" height="62px" /></a></td>
+                              
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar010.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar010.jpg" width="95" height="62px" /></a></td>
+                             
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar011.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar011.jpg" width="95" height="62px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/5march%20HJH%20MARIYAM2012/2012JPinkMar012.jpg" width="95" height="62px" /></a></td>
+                             
+                            </tr>
+                            
+                             <tr> 
+                             
+                             <td width="92">&nbsp;</td>
+                             <td width="92">&nbsp;</td>
+                           <td width="92">&nbsp;</td>
+                           <td width="92">&nbsp;</td>
+                            <td width="92">&nbsp;</td>
+                             <td width="92">&nbsp;</td>
+                            <td width="92">&nbsp;</td>
+                             <td width="92">&nbsp;</td>
+                             
+                           </tr>
+        </table>
+      </div>   
+        
+</div>
+
+<div class="gallery_header">
+UMRAH MAR 2012 BY GROUP</div>
+
+<div class="clr"></div>
+
+<div class="gallery">
+<iframe src="http://files.photosnack.com/iframe/embed.html?hash=pzk8rsyl&bgcolor=EEEEEE&wmode=window&t=1332119167" width="399" height="399" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+</div>
+
+<div class="gallery2">
+
+<div style="height:400px;width:800px;font:12px/14px Arial, Helvetica, sans-serif; overflow: auto;">
+                        <table width="800" border="0">
+                        <!--23/11/2011 PAJ086-PAJ110 -->
+                        <tr>
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UMarByGroup2012/GroupU2012MAR01.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UMarByGroup2012/GroupU2012MAR01.jpg" alt="" width="95" height="62px" /></a></td>
+                            
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UMarByGroup2012/GroupU2012MAR02.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UMarByGroup2012/GroupU2012MAR02.jpg" alt="" width="95" height="62px" /></a></td>
+                            
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UMarByGroup2012/GroupU2012MAR03.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UMarByGroup2012/GroupU2012MAR03.jpg" alt="" width="95" height="62px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UMarByGroup2012/GroupU2012MAR04.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UMarByGroup2012/GroupU2012MAR04.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UMarByGroup2012/GroupU2012MAR05.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UMarByGroup2012/GroupU2012MAR05.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UMarByGroup2012/GroupU2012MAR06.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UMarByGroup2012/GroupU2012MAR06.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UMarByGroup2012/GroupU2012MAR07.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UMarByGroup2012/GroupU2012MAR07.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UMarByGroup2012/GroupU2012MAR08.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UMarByGroup2012/GroupU2012MAR08.jpg" alt="" width="95" height="62px" /></a></td>                
+                             
+                          </tr>
+                            
+                            <tr>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UMarByGroup2012/GroupU2012MAR09.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UMarByGroup2012/GroupU2012MAR09.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100">&nbsp;</td>
+                             
+                             <td width="100">&nbsp;</td>
+                             
+                             <td width="100">&nbsp;</td>
+                             
+                              <td width="100">&nbsp;</td>
+                              
+                             <td width="100">&nbsp;</td>
+                             
+                             <td width="100">&nbsp;</td>
+                             
+                             <td width="100">&nbsp;</td>
+                            </tr>
+                            
+                            
+                             <tr> 
+                             
+                             <td width="92">&nbsp;</td>
+                             <td width="92">&nbsp;</td>
+                           <td width="92">&nbsp;</td>
+                           <td width="92">&nbsp;</td>
+                            <td width="92">&nbsp;</td>
+                             <td width="92">&nbsp;</td>
+                            <td width="92">&nbsp;</td>
+                             <td width="92">&nbsp;</td>
+                             
+                           </tr>
+        </table>
+      </div>   
+        
+</div>
+
+<div class="gallery_header">
+Group Merah/Biru Umrah 7Mar 2012 -HJ AZIZ & USTAZAH ZAKIAH</div>
+
+<div class="clr"></div>
+
+<div class="gallery">
+<iframe src="http://files.photosnack.com/iframe/embed.html?hash=pzh90ujh&bgcolor=EEEEEE&wmode=window&t=1331533729" width="399" height="399" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+</div>
+
+<div class="gallery2">
+
+<div style="height:400px;width:800px;font:12px/14px Arial, Helvetica, sans-serif; overflow: auto;">
+                        <table width="800" border="0">
+                        <!--23/11/2011 PAJ086-PAJ110 -->
+                        <tr>
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah01Mar2012.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah01Mar2012.jpg" alt="" width="95" height="62px" /></a></td>
+                            
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah02Mar2012.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah02Mar2012.jpg" alt="" width="95" height="62px" /></a></td>
+                            
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah03Mar2012.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah03Mar2012.jpg" alt="" width="95" height="62px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" "http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah04Mar2012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah04Mar2012.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah05Mar2012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah05Mar2012.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah06Mar2012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah06Mar2012.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah07Mar2012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah07Mar2012.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah08Mar2012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah08Mar2012.jpg" alt="" width="95" height="62px" /></a></td>                
+                             
+                          </tr>
+                            
+                            <tr>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah09Mar2012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah09Mar2012.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah010Mar2012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah010Mar2012.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah011Mar2012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah011Mar2012.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah012Mar2012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah012Mar2012.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                              <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah013Mar2012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah013Mar2012.jpg" alt="" width="95" height="62px" /></a></td>
+                              
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah014Mar2012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah014Mar2012.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah015Mar2012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah015Mar2012.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah016Mar2012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/UmrahMar2012/Umrah016Mar2012.jpg" alt="" width="95" height="62px" /></a></td>
+                            </tr>
+                            
+                            
+                             <tr> 
+                             
+                             <td width="92">&nbsp;</td>
+                             <td width="92">&nbsp;</td>
+                           <td width="92">&nbsp;</td>
+                           <td width="92">&nbsp;</td>
+                            <td width="92">&nbsp;</td>
+                             <td width="92">&nbsp;</td>
+                            <td width="92">&nbsp;</td>
+                             <td width="92">&nbsp;</td>
+                             
+                           </tr>
+        </table>
+      </div>   
+        
+</div>
+
+<div class="gallery_header">
+KELAS UMRAH 17 FEB 2012</div>
+
+<div class="clr"></div>
+
+<div class="gallery">
+<iframe src="http://files.photosnack.com/iframe/embed.html?hash=puiyd0yl&wmode=transparent&t=1329709149" width="399" height="399" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+</div>
+
+<div class="gallery2">
+
+<div style="height:400px;width:800px;font:12px/14px Arial, Helvetica, sans-serif; overflow: auto;">
+                        <table width="800" border="0">
+                        <!--23/11/2011 PAJ086-PAJ110 -->
+                        <tr>
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU01.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU01.jpg" alt="" width="95" height="62px" /></a></td>
+                            
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU02.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU02.jpg" alt="" width="95" height="62px" /></a></td>
+                            
+                            <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU03.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU03.jpg" alt="" width="95" height="62px" /></a></td>
+                            
+                             <td width="100"><a class="fancybox" "http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU04.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU04.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU05.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU05.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU06.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU06.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU07.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU07.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU08.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU08.jpg" alt="" width="95" height="62px" /></a></td>                
+                             
+                            </tr>
+                            
+                            <tr>
+                            
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU09.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU09.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU010.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU010.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU011.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU011.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU012.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU012.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                              <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU013.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU013.jpg" alt="" width="95" height="62px" /></a></td>
+                              
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU014.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU014.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU015.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU015.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                             <td width="100"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU016.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU016.jpg" alt="" width="95" height="62px" /></a></td>
+                            </tr>
+                            
+                            
+                             <tr> 
+                             
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU017.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU017.jpg" alt="" width="95" height="62px" /></a></td>
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU016.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU016.jpg" alt="" width="95" height="62px" /></a></td>
+                           <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU018.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU018.jpg" alt="" width="95" height="62px" /></a></td>
+                           <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU019.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU019.jpg" alt="" width="95" height="62px" /></a></td>
+                            <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU020.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU020.jpg" alt="" width="95" height="62px" /></a></td>
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU021.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU021.jpg" alt="" width="95" height="62px" /></a></td>
+                            <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU022.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU022.jpg" alt="" width="95" height="62px" /></a></td>
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU023.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU023.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                           </tr>
+                           
+                            <tr> 
+                             
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU024.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU024.jpg" alt="" width="95" height="62px" /></a></td>
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU025.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU025.jpg" alt="" width="95" height="62px" /></a></td>
+                           <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU026.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU026.jpg" alt="" width="95" height="62px" /></a></td>
+                           <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU027.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU027.jpg" alt="" width="95" height="62px" /></a></td>
+                            <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU028.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU028.jpg" alt="" width="95" height="62px" /></a></td>
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU029.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU029.jpg" alt="" width="95" height="62px" /></a></td>
+                            <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU030.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU030.jpg" alt="" width="95" height="62px" /></a></td>
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU031.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU031.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                           </tr>
+                           
+                           <tr> 
+                             
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU032.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU032.jpg" alt="" width="95" height="62px" /></a></td>
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU033.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU033.jpg" alt="" width="95" height="62px" /></a></td>
+                           <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU034.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU034.jpg" alt="" width="95" height="62px" /></a></td>
+                           <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU035.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU035.jpg" alt="" width="95" height="62px" /></a></td>
+                            <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU036.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU036.jpg" alt="" width="95" height="62px" /></a></td>
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU037.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU037.jpg" alt="" width="95" height="62px" /></a></td>
+                            <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU038.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU038.jpg" alt="" width="95" height="62px" /></a></td>
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU039.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU039.jpg" alt="" width="95" height="62px" /></a></td>
+                             
+                           </tr>
+                           
+                            <tr> 
+                             
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU040.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU040.jpg" alt="" width="95" height="62px" /></a></td>
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU041.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU041.jpg" alt="" width="95" height="62px" /></a></td>
+                           <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU042.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU042.jpg" alt="" width="95" height="62px" /></a></td>
+                           <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU043.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU043.jpg" alt="" width="95" height="62px" /></a></td>
+                            <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU044.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU044.jpg" alt="" width="95" height="62px" /></a></td>
+                             <td width="92"><a class="fancybox" href="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU045.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="http://i1116.photobucket.com/albums/k573/ShahidahTravelSB/CLASS%20UMRAH%2017FEB/CU045.jpg" alt="" width="95" height="62px" /></a></td>
+                            <td width="92">&nbsp;</td>
+                             <td width="92">&nbsp;</td>
+                             
+                           </tr>
+                            </table>
+                      </div>   
+        
+</div>
+
+</div>
+<div class="clr"></div>
+
+<!--CONTENT END-->
+
+
+<!--FOOTER START-->
+
+<div id="sub_footer">
+
+<div class="footerMenu_block">
+<div class="title">UMRAH & HAJI</div>
+<div class="nd_title">&nbsp;Umrah</div>
+<div class="rd_title"><a href="umrahpackage.html" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Package Umrah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Rooming List</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Umrah Movement</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Umrah Course</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Hotel Jemaah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Wisata</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Umrah Gallery</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Register Umrah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Testimonial Umrah</font></a></div>
+
+<div class="nd_title">&nbsp;Haji</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Package Haji</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Rooming List</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Haji Course</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Register Haji</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Testimonial Haji</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Hajj Movement</font></a></div>
+</div>  
+
+<div class="footerMenu_block2">
+
+<div class="title">&nbsp;</div>
+<div class="nd_title">&nbsp;Baitulmaqdis</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Keistimewaan Baitulmaqdis</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Kenapa kita perlu ziarah Baitulmaqdis?</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Umat Islam digesa ziarah Baitulmaqdis</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Video Baitulmaqdis</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title">&nbsp;</div>
+<div class="title">GO EASY HOLIDAY</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Packages</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Testimonial</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Gallery Holiday</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Register</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title"><a href="http://www.easytickets.com.sg/" style="text-decoration:none"><font color="#FFFFFF">EASY TICKETS</font></a></div>
+<div class="title">&nbsp;</div>
+<div class="title"><a href="http://honeymoonparadise.com.sg/" style="text-decoration:none"><font color="#FFFFFF">HONEYMOON</font></a></div>
+
+</div>
+
+<div class="footerMenu_block2">
+
+<div class="title">SINGAPORE INBOUND</div>
+
+<div class="rd2_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;2 To Go</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Group</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title"><a href="http://www.perjalanansuci.com/" style="text-decoration:none"><font color="#FFFFFF">PERJALANAN SUCI</font></a><a href="../../../Galllery/galleriffic-2.0/example-2.html"></a></div>
+<div class="title">&nbsp;</div>
+<div class="title">BADAL HAJI</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Keistimewaan badal Haji</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Pendaftaran badal Haji</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title">AQIQAH & QURBAN</div>
+<div class="nd_title">&nbsp;Aqiqah</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Maksud Aqiqah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Pendaftaran Aqiqah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Asal Usul Korban</font></a></div>
+<div class="nd_title">&nbsp;Korban</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Panduan ibadah korban</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Pendaftaran korban</font></a></div>
+</div>
+
+<div class="footerMenu_block2">
+
+<div class="title"><a href="http://www.stntinternational.com/" style="text-decoration:none"><font color="#FFFFFF">ST & T</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title"><a href="http://www.singaporehajjnews.com/" style="text-decoration:none"><font color="#FFFFFF">SINGAPORE HAJJ NEWS</font></a></div>
+<div class="title">&nbsp;</div>
+<div class="title">ABOUT US</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Company Profile</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Pengasas Shahidah Travel</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;What others say</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Call us</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;</font></a></div>
+<div class="title"><a href="index.html" style="text-decoration:none"><font color="#FFFFFF">HOME</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;</font></a></div>
+<div class="rd_title"><font color="#FFFFFF" style="font-size:11px">390 Victoria Street, #01-26/30 Golden Landmark<br />
+Singapore 188061<br />
+Tel: (+65) 6299 2345 (Haj/Umrah) / <br />
+(+65) 6291 4555 (Tours/Ticketing)<br />
+Fax: (65) 6299 1235<br />
+Email: enquiry@shahidahtravel.com<br /></font></div>
+</div>
+  
+</div>
+
+
+<div id="footer">
+ <div id="footer_text"> Copyright 2013 All Rights Reserved. Di Bangunkan oleh: Shahidah Travel & Tours Pte Ltd</div>
+</div>
+</div>
+
+<center>
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'ms', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</center>
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				// We only want these styles applied when javascript is enabled
+				$('div.navigation').css({'width' : '300px', 'float' : 'left'});
+				$('div.content').css('display', 'block');
+
+				// Initially set opacity on thumbs and add
+				// additional styling for hover effect on thumbs
+				var onMouseOutOpacity = 0.67;
+				$('#thumbs ul.thumbs li').opacityrollover({
+					mouseOutOpacity:   onMouseOutOpacity,
+					mouseOverOpacity:  1.0,
+					fadeSpeed:         'fast',
+					exemptionSelector: '.selected'
+				});
+				
+				// Initialize Advanced Galleriffic Gallery
+				var gallery = $('#thumbs').galleriffic({
+					delay:                     2500,
+					numThumbs:                 15,
+					preloadAhead:              10,
+					enableTopPager:            true,
+					enableBottomPager:         true,
+					maxPagesToShow:            7,
+					imageContainerSel:         '#slideshow',
+					controlsContainerSel:      '#controls',
+					captionContainerSel:       '#caption',
+					loadingContainerSel:       '#loading',
+					renderSSControls:          true,
+					renderNavControls:         true,
+					playLinkText:              'Play Slideshow',
+					pauseLinkText:             'Pause Slideshow',
+					prevLinkText:              '&lsaquo; Previous Photo',
+					nextLinkText:              'Next Photo &rsaquo;',
+					nextPageLinkText:          'Next &rsaquo;',
+					prevPageLinkText:          '&lsaquo; Prev',
+					enableHistory:             false,
+					autoStart:                 false,
+					syncTransitions:           true,
+					defaultTransitionDuration: 900,
+					onSlideChange:             function(prevIndex, nextIndex) {
+						// 'this' refers to the gallery, which is an extension of $('#thumbs')
+						this.find('ul.thumbs').children()
+							.eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
+							.eq(nextIndex).fadeTo('fast', 1.0);
+					},
+					onPageTransitionOut:       function(callback) {
+						this.fadeTo('fast', 0.0, callback);
+					},
+					onPageTransitionIn:        function() {
+						this.fadeTo('fast', 1.0);
+					}
+				});
+			});
+		</script>
+</body>
+</html>

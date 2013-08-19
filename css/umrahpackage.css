@@ -1,0 +1,624 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*FOR UMRAH PACKAGE */
+
+#package {
+	display:block;
+	width:1200px;
+	background-color:#21221d;
+	min-height:1200px;	
+	float:left;	
+	margin-top:2px;
+	padding-bottom:55px;
+}
+
+#package_title {	
+	display:block;
+	width:950px;
+	height: 80px;
+	float:left;
+	background-color:#a5330b;	
+	margin: 50px 0 0 130px;	
+}
+
+#package_text {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:52px;
+	color:#fff;
+	font-weight:bold;
+	text-transform:uppercase;
+	text-align:center;		
+	margin:8px 0 0 110px;
+	float:left;
+}
+
+.package_table {
+	float:left;	
+	margin:45px 0 0 130px;
+	
+	
+}
+
+.package_header {
+	float:left;		
+	display:block;
+	width:950px;
+	height:80px;
+	background:#a5330b;
+	border-radius: 4px; /*css3 round corners*/
+-moz-border-radius: 4px; /*css3 round corners*/
+-webkit-border-radius: 4px; /*css3 round corners*/
+	
+	}
+
+.left_text {
+	float:left;	
+	width:750px;
+}
+
+.packageHeader_text {
+	float:left;	
+	margin:8px;
+	font-size:24px;
+	font-family:Arial, Helvetica, sans-serif;	
+	font-weight:bold;
+	color:#FFF;
+}
+
+.packageHeader_text_new {
+	float:left;	
+	margin:8px 0 8px 350px;
+	font-size:24px;
+	font-family:Arial, Helvetica, sans-serif;	
+	font-weight:bold;
+	color:#FFF;
+}
+
+.packageHeader_text2 {
+	float:left;	
+	margin:5px 0 0 15px;;
+	font-size:18px;
+	font-family:Arial, Helvetica, sans-serif;	
+	color:#FFF;
+}
+
+.table_picture {
+	float:left;	
+	margin: 10px 0 0 10px;
+}
+
+
+.package_logo2 {
+	float:left;
+	margin: 10px 0 0 5px;
+}
+
+.package_header2 {
+	float:left;		
+	display:block;
+	width:950px;
+	height:105px;
+	background:#a5330b;
+	border-radius: 4px; /*css3 round corners*/
+-moz-border-radius: 4px; /*css3 round corners*/
+-webkit-border-radius: 4px; /*css3 round corners*/
+	
+	}
+
+.left_text2 {
+	float:left;	
+	width:750px;
+}
+
+.packageHeader2_text {
+	float:left;	
+	margin:8px;
+	font-size:24px;
+	font-family:Arial, Helvetica, sans-serif;	
+	font-weight:bold;
+	color:#FFF;
+}
+
+.packageHeader2_text2 {
+	float:left;	
+	margin:5px 0 0 15px;;
+	font-size:18px;
+	font-family:Arial, Helvetica, sans-serif;	
+	color:#FFF;
+}
+
+
+.package_logo {
+	float:left;
+	margin: 10px 0 0 60px;
+}
+
+/*TABLE HEADER END */
+
+.table_box {
+	display:block;
+	width:950px;
+	
+	float:left;
+		
+	margin: 2px 0 0 130px;	
+}
+
+.table_box1 {
+	display:block;
+	width:80px;
+	height:70px;
+	float:left;
+	background-color:#a5330b;	
+	border-radius: 2px; /*css3 round corners*/
+	-moz-border-radius: 2px; /*css3 round corners*/
+	-webkit-border-radius: 2px; /*css3 round corners*/		
+}
+
+.table_box1_font {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#fff;
+	text-align: center;
+	margin:20px 0;			
+}
+
+.table_box2 {
+	display:block;
+	margin-left:2px;
+	width:55px;
+	height:70px;
+	float:left;
+	background-color:#a5330b;	
+	border-radius: 2px; /*css3 round corners*/
+	-moz-border-radius: 2px; /*css3 round corners*/
+	-webkit-border-radius: 2px; /*css3 round corners*/		
+}
+
+.table_box2_font {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#fff;
+	text-align: center;
+	margin:20px 0;			
+}
+
+.table_box3 {
+	display:block;
+	width:750px;
+	height:70px;
+	float:left;
+		
+}
+
+.inner_table_box {
+	display:block;
+	margin-left:2px;
+	width:185px;
+	height:34px;
+	float:left;
+	background-color:#a5330b;	
+	border-radius: 2px; /*css3 round corners*/
+	-moz-border-radius: 2px; /*css3 round corners*/
+	-webkit-border-radius: 2px; /*css3 round corners*/
+}
+
+.inner_table_box_font {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#fff;
+	text-align: center;
+	margin:10px 0;			
+}
+
+.inner_table_box2 {
+	display:block;
+	margin:2px 0 0 2px;
+	width:91.5px;
+	height:34px;
+	float:left;
+	background-color:#a5330b;	
+	border-radius: 2px; /*css3 round corners*/
+	-moz-border-radius: 2px; /*css3 round corners*/
+	-webkit-border-radius: 2px; /*css3 round corners*/
+}
+
+.inner_table_box2_font {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#fff;
+	text-align: center;
+	margin:2px 0;			
+}
+
+.inner_table_box3_font {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#fff;
+	text-align: center;
+	margin:10px 0;			
+}
+
+
+.table_box4 {
+	display:block;
+	margin-left:1px;
+	width:61px;
+	height:70px;
+	float:left;
+	background-color:#a5330b;	
+	border-radius: 2px; /*css3 round corners*/
+	-moz-border-radius: 2px; /*css3 round corners*/
+	-webkit-border-radius: 2px; /*css3 round corners*/		
+}
+
+.table_box4_font {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#fff;
+	text-align: center;
+	margin:20px 0;			
+}
+
+/* TABLE BOX END */
+
+/* TABLE CONTENT START */
+
+.table_content {
+	display:block;
+	width:1020px;	
+	float:left;		
+	margin: 2px 0 0 130px;	
+}
+
+.table_content1 {
+	display:block;
+	width:80px;
+	height:20px;
+	float:left;
+	background-color:#a5330b;	
+}
+
+.table_content1_text{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;	
+	color:#fff;
+	text-align: center;
+	margin:2px 0;
+}
+
+.table_content2 {
+	display:block;
+	margin: 0 0 0 2px;
+	width:55px;
+	height:20px;
+	float:left;
+	background-color:#a5330b;	
+}
+
+.table_content2_text{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;	
+	color:#fff;
+	text-align: center;
+	margin:2px 0;
+}
+
+.table_content3 {
+	display:block;
+	margin: 0 0 0 2px;
+	width:91.5px;
+	height:20px;
+	float:left;
+	background-color:#a5330b;	
+}
+
+.table_content3_text{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;	
+	color:#fff;
+	text-align: center;
+	margin:2px 0;
+}
+
+.table_content4 {
+	display:block;
+	margin: 0 0 0 3px;
+	width:61px;
+	height:20px;
+	float:left;
+	background-color:#a5330b;	
+}
+
+.table_content4_text{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;	
+	color:#fff;
+	text-align: center;
+	margin:2px 0;
+}
+
+.info {
+	display:block;
+	margin: 0 0 0 3px;
+	width:61px;
+	height:20px;
+	float:left;
+	background-color:#a5330b;	
+}
+
+.info_text{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;	
+	color:#fead00;
+	text-align: center;
+	margin:2px 0;
+}
+
+/* PENGINAPAN START */
+
+.penginapan_header {
+	display:block;
+	float:left;
+	margin:45px 2px 0 130px;
+	width:463px;
+	height:auto;
+	background-color:#a5330b;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#FFF;	
+	text-align:center;	
+	padding:5px;
+}
+
+.penginapan_header2 {
+	display:block;
+	float:left;
+	margin:45px 0px 0 2px;
+	width:463px;
+	height:auto;
+	background-color:#a5330b;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;	
+	color:#FFF;
+	text-align:center;	
+	padding:5px;
+}
+
+.penginapan_block1 {
+	display:block;
+	float:left;
+	margin:1px 2px 0 130px;
+	width:463px;
+	height:auto;
+	background-color:#a5330b;		
+	padding:5px;	
+}
+
+.penginapan_block2 {
+	display:block;
+	float:left;
+	margin:1px 0px 0 2px;
+	width:225px;
+	height:auto;
+	background-color:#a5330b;	
+	padding:5px;
+}
+
+.penginapan_footer {
+	display:block;
+	float:left;
+	margin:1px 2px 0 130px;
+	width:463px;
+	height:auto;
+	background-color:#a5330b;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#FFF;	
+	text-align:center;	
+	padding:5px;
+}
+
+.penginapan_footer2 {
+	display:block;
+	float:left;
+	margin:1px 0px 0 2px;
+	width:225px;
+	height:auto;
+	background-color:#a5330b;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;	
+	color:#FFF;
+	text-align:center;	
+	padding:5px;
+}
+
+/* PENGINAPAN END */
+
+/* UPGRADE HOTEL START */
+
+.upgrade_hotel {
+	display:block;
+	float:left;
+	margin:45px 2px 0 130px;
+	width:940px;
+	height:auto;
+	background-color:#a5330b;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#FC0;	
+	text-align:center;	
+	padding:5px;
+}
+
+.upgrade_header1 {
+	display:block;
+	float:left;
+	margin:16px 0 0 130px;
+	width:668px;
+	height:auto;
+	background-color:#a5330b;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#fff;	
+	text-align:center;	
+	padding:5px;
+}
+
+.upgrade_header2 {
+	display:block;
+	float:left;
+	margin:16px 0 0 4px;
+	width:260px;
+	height:auto;
+	background-color:#a5330b;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;	
+	color:#fff;
+	text-align:center;	
+	padding:5px;
+}
+
+.upgrade_header3 {
+	display:block;
+	float:left;
+	margin:16px 0 0 4px;
+	width:258px;
+	height:auto;
+	background-color:#a5330b;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;	
+	color:#FFF;
+	text-align:center;	
+	padding:5px;
+}
+
+.upgrade_header4 {
+	display:block;
+	float:left;
+	margin:16px 0 0 130px;
+	width:940px;
+	height:auto;
+	background-color:#a5330b;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;	
+	color:#FFF;
+	text-align:center;	
+	padding:5px;
+}
+
+
+.upgrade_block1{
+	display:block;
+	float:left;
+	margin:1px 0 0 130px;
+	width:124px;
+	height:auto;
+	background-color:#a5330b;		
+	padding:5px;
+}
+
+.upgrade_block2{
+	display:block;
+	float:left;
+	margin:1px 0 0 2px;
+	width:124px;
+	height:auto;
+	background-color:#a5330b;		
+	padding:5px;
+}
+
+.upgrade_block3{
+	display:block;
+	float:left;
+	margin:1px 0 0 4px;
+	width:122px;
+	height:auto;
+	background-color:#a5330b;		
+	padding:5px;
+}
+
+.upgrade_footer1{
+	display:block;
+	float:left;
+	margin:1px 0 0 130px;
+	width:124px;
+	height:auto;
+	background-color:#a5330b;		
+	padding:5px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;	
+	color:#FFF;
+	text-align:center;		
+}
+
+.upgrade_footer2{
+	display:block;
+	float:left;
+	margin:1px 0 0 2px;
+	width:124px;
+	height:auto;
+	background-color:#a5330b;		
+	padding:5px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;	
+	color:#FFF;
+	text-align:center;	
+}
+
+.upgrade_footer3{
+	display:block;
+	float:left;
+	margin:1px 0 0 4px;
+	width:122px;
+	height:auto;
+	background-color:#a5330b;		
+	padding:5px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;	
+	color:#FFF;
+	text-align:center;
+}
+
+/* UPGRADE HOTEL END */
+
+.note {
+	display:block;
+	float:left;
+	margin:16px 0 0 130px;			
+	padding:5px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;	
+	color:#FFF;
+	text-align:left;
+}
+
+#aaron {
+	display:block;
+	float:left;
+	width:278px;
+	height:371px;
+	background-color:#a5330b;
+	margin:16px 0 0 130px;
+	padding:10px;	
+}
+
+.photosnack {
+	float:left;
+	display:block;
+	width:278px;
+	height:371px;
+	background-color:#a5330b;
+	margin:16px 0 0 352px;
+	padding:10px;	
+}
+
+ 
+  /* FOR UMRAH PACKAGE END */

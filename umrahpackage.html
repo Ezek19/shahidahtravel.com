@@ -1,0 +1,3185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Shahidah Travel & Tours Pte Ltd</title>
+<meta name="keywords" content="shahidah travel, Umrah & Haji, Go Easy Holiday, Easy Ticket, Honeymoon, Singapore Inbound, Badal Haji, Aqiqah&Korban, Perjalanan Suci, Singapore Hajj News, ST&T" />
+<meta name="description" content="Mesra & Amanah" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-translate-customization" content="4f319f2e9f5d3e1b-04a7941baa3ff161-gfb4d96411305c17f-17"></meta>
+
+<link rel="stylesheet" href="css/styles.css" type="text/css" />
+<link rel="stylesheet" href="css/umrahpackage.css" type="text/css" />
+
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="lib/jquery-1.10.1.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 2
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			/*
+			 *  Open manually
+			 */
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+		});
+	</script>
+	<style type="text/css">
+		.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #222;
+		}
+
+		
+	</style>
+</head>
+
+<body>
+<div id="pageWrapper">
+
+<!--HEADER START-->
+<div id="header">
+
+
+<div id="logo"><a href="index.html"><img src="images/logo.png" width="175px" /></a></div>
+<div id="box">
+<div id="social_button"><a href="https://www.facebook.com/masyarakat.shahidah"><img src="images/facebook.png" width="40px" /></a>&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/shahidahtravel"><img src="images/twitter.png" width="40px" /></a></div>
+<div class="clr"></div>
+<div class="button2">&nbsp;</div>
+<div class="button"><a class="fancybox fancybox.iframe" href="feedback.html"><img src="images/feedback2.png" width="120px" /></a></div>
+<div class="button"><a class="fancybox fancybox.iframe" href="newsletter.html"><img src="images/newsletter.png" width="120px" /></a></div>
+</div>
+<div id="header_text">390 Victoria Street, #01-26/30 Golden Landmark<br />
+Singapore 188061<br />
+Tel: (+65) 6299 2345 (Haj/Umrah) / <br />
+(+65) 6291 4555 (Tours/Ticketing)<br />
+Fax: (65) 6299 1235<br />
+Email: enquiry@shahidahtravel.com<br />
+</div>
+<div id="qr_code"><img src="images/qrcode.png" width="100px" /></div>
+
+</div>
+<div class="clr"></div>
+
+<!--HEADER END-->
+
+
+<!--MENU START-->
+
+<div id="nav">
+
+<ul id="menu">
+    <li><a href="index.html"><img src="images/home.jpg" width="199px" /></a></li>
+    
+    <li><a href="#"><img src="images/umrahnhaji.jpg" width="199px" /></a>
+        <ul>
+        
+        	<li><a href="#"><img src="images/umrah.png" width="199px" /></a></li>
+                
+                    <li><a href="#"><img src="images/packageumrah.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/roominglist.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/umrahmove.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/umrahcourse.png" width="199px" /></a></li>
+                    <li><a href="hoteljemaah.html"><img src="images/hoteljemaah.png" width="199px" /></a></li>
+                    <li><a href="wisata.html"><img src="images/wisata.png" width="199px" /></a></li>
+                    <li><a href="umrahgallery.html"><img src="images/umrahgallery.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/registerumrah.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/testimonialumrah.png" width="199px" /></a></li>
+             	
+            
+            
+            <li><a href="#"><img src="images/haji.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/packagehaji.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/hajirooming.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/hajicourse.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/registerhaji.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/testimonialhaji.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/hajimovement.png" width="199px" /></a></li>
+            
+            <li><a href="#"><img src="images/baitulmaqdis.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/keistimewaanbaitulmaqdis.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/kenapa.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/umatislam.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/video.png" width="199px" /></a></li>
+        </ul>
+    </li>
+    <li><a href="#"><img src="images/goeasy.jpg" width="199px" /></a>
+        <ul>
+            <li><a href="#"><img src="images/goeasy-packages.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/testimonial-easy.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/galleryholiday.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/goeasy-register.png" width="199px" /></a></li>
+            
+        </ul>
+    </li>
+    <li><a href="http://www.easytickets.com.sg/"><img src="images/easytickets.jpg" width="199px" /></a>
+        
+    </li>
+    <li><a href="http://honeymoonparadise.com.sg/"><img src="images/honeymoon.jpg" width="199px" /></a>
+        
+    </li>
+    <li><a href="#"><img src="images/singaporeinbound.jpg" width="199px" height="37" /></a>
+        
+        <ul>
+            <li><a href="#"><img src="images/2togo.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/sgboundgroup.png" width="199px" height="37" /></a></li>
+                    
+        </ul>
+        
+    </li>
+     
+ 
+    <li><a href="http://www.perjalanansuci.com/"><img src="images/perjalanansuci.jpg" width="199px" height="37" /></a>
+        
+    </li>
+    
+    <li><a href="#"><img src="images/badalhaji.jpg" width="199px" height="37" /></a>
+        <ul>        	
+            <li><a href="#"><img src="images/keistimewaanbadal.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/pendaftaranbadal.png" width="199px" /></a></li>
+        </ul>
+    </li>
+    
+     <li><a href="#"><img src="images/aqiqahnqurban.jpg" width="199px" height="37" /></a>
+        <ul>
+            <li><a href="#"><img src="images/aqiqah.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/maksudaqiqah.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/pendaftaranaqiqah.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/asalusulqurban.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/qurban.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/panduanqurban.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/pendaftaranqurban.png" width="199px" /></a></li>
+        </ul>
+    </li>
+    
+     <li><a href="http://www.stntinternational.com/"><img src="images/stnt.jpg" width="199px" height="37" /></a>
+        
+    </li>
+    
+    <li><a href="http://www.singaporehajjnews.com/"><img src="images/singhajinews.jpg" width="199px" height="37" /></a>
+        
+    </li>
+    
+    <li><a href="#"><img src="images/aboutus.jpg" width="199px" height="37" /></a>
+        <ul>
+            <li><a href="#"><img src="images/companyprofile.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/pengasas.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/otherssay.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/callus.png" width="199px" /></a></li>        
+        </ul>
+    </li>   
+    
+</ul>
+
+</div>
+
+<!--MENU END-->
+
+<div class="clr"></div>
+<!--CONTENT START-->
+<div id="content">
+
+<div id="package">
+
+<div id="package_title">
+
+<div id="package_text">
+umrah package 2013/1434
+</div>
+
+</div> 
+
+<!--TABLE START-->
+
+<div class="package_table">
+
+<div class="package_header">
+
+<div class="left_text">
+
+<div class="packageHeader_text">UMRAH CUTI SEKOLAH DISEMBER (MUSIM SEJUK)
+</div>
+<div class="clr"></div>
+<div class="packageHeader_text2"><em>** Umrah visa tertakluk kepada kelulusan dari kedutaan Arab Saudi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>*Awal Madinah</strong></em>
+
+</div>
+</div>
+
+
+<div class="package_logo">
+<img src="images/singapore_airlines_logo.jpg" height="60px" />
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+</div>
+
+<div class="table_box">
+
+<div class="table_box1">
+<div class="table_box1_font">
+Departure / Berlepas
+</div>
+</div>
+
+<div class="table_box2">
+<div class="table_box2_font">
+Pakej / Hari
+</div>
+</div>
+
+<div class="table_box3">
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Bilik berdua
+</div>
+</div>
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Bilik bertiga
+</div>
+</div>
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Kanak kanak dengan katil
+</div>
+</div>
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Kanak kanak tanpa katil
+</div>
+</div>
+
+<div class="clr"></div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+</div>
+
+<div class="table_box4">
+<div class="table_box4_font">
+Balance seats
+</div>
+</div>
+
+<div class="clr"></div>
+</div>
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">18 DEC</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+11 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 445
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 645
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 250
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 450
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 2, 500</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 2, 600</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 1, 995</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+
+<!--TABLE CONTENT END-->
+
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">20 DEC</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+11 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 445
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 645
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 250
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 450
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 2, 500</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 2, 600</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 1, 995</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+
+<!--TABLE CONTENT END-->
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">*22 DEC</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+12 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 595
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 795
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 400
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 600
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 2, 650</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 2,750</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 1, 995</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+
+<!--TABLE CONTENT END-->
+
+<!--TABLE END-->
+
+<!--TABLE START-->
+
+<div class="package_table">
+
+<div class="package_header2">
+<div class="table_picture"><img src="images/Ayoob&Hamidah.jpg" height="60px" />
+
+</div>
+<div class="left_text2">
+
+<div class="packageHeader2_text">UMRAH CUTI SEKOLAH DISEMBER (MUSIM SEJUK)
+<br />
+Bersama Haji Ayoob Angullia semasa di Baitulmaqdis
+</div>
+<div class="clr"></div>
+<div class="packageHeader2_text2"><em>** Umrah visa tertakluk kepada kelulusan dari kedutaan Arab Saudi</em>
+
+</div>
+</div>
+
+<div class="package_logo2">
+<img src="images/royaljordanian.jpg" height="60px" />
+</div>
+
+</div>
+<div class="clr"></div>
+
+
+
+
+</div>
+
+<div class="table_box">
+
+<div class="table_box1">
+<div class="table_box1_font">
+Departure / Berlepas
+</div>
+</div>
+
+<div class="table_box2">
+<div class="table_box2_font">
+Pakej / Hari
+</div>
+</div>
+
+<div class="table_box3">
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Bilik berdua
+</div>
+</div>
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Bilik bertiga
+</div>
+</div>
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Kanak kanak dengan katil
+</div>
+</div>
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Kanak kanak tanpa katil
+</div>
+</div>
+
+<div class="clr"></div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+</div>
+
+<div class="table_box4">
+<div class="table_box4_font">
+Balance seats
+</div>
+</div>
+
+<div class="clr"></div>
+</div>
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">22 DEC</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+15 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 5, 150</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 5, 295</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 4, 950</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 5, 125</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 4, 195</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 4, 325	
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 4, 195
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 4, 325
+</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+<!--TABLE CONTENT END-->
+
+<!--TABLE END-->
+
+<div id="package_title">
+
+<div id="package_text">
+umrah package 2014/1435
+</div>
+
+</div>
+
+<!--TABLE START-->
+
+<div class="package_table">
+
+<div class="package_header">
+
+<div class="left_text">
+
+<div class="packageHeader_text_new">UMRAH JANUARY
+</div>
+<div class="clr"></div>
+<div class="packageHeader_text2"><em>** Umrah visa tertakluk kepada kelulusan dari kedutaan Arab Saudi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>*Awal Madinah</strong></em>
+
+</div>
+</div>
+
+
+<div class="package_logo">
+<img src="images/singapore_airlines_logo.jpg" height="60px" />
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+</div>
+
+<div class="table_box">
+
+<div class="table_box1">
+<div class="table_box1_font">
+Departure / Berlepas
+</div>
+</div>
+
+<div class="table_box2">
+<div class="table_box2_font">
+Pakej / Hari
+</div>
+</div>
+
+<div class="table_box3">
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Bilik berdua
+</div>
+</div>
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Bilik bertiga
+</div>
+</div>
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Kanak kanak dengan katil
+</div>
+</div>
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Kanak kanak tanpa katil
+</div>
+</div>
+
+<div class="clr"></div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+</div>
+
+<div class="table_box4">
+<div class="table_box4_font">
+Balance seats
+</div>
+</div>
+
+<div class="clr"></div>
+</div>
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text"> 
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">8 JAN</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+11 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 445
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 645
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 250</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 450
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 500</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 600
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+
+<!--TABLE CONTENT END-->
+
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text"> 
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">*19 JAN</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+12 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 595
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 795
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 400
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 600
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 650
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 750
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 1, 995 </div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 1, 995 </div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+
+<!--TABLE CONTENT END-->
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">29 JAN</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+11 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 445
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 645
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 250
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 450
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 500</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 600
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 1, 995 </div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 1, 995 </div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+
+<!--TABLE CONTENT END-->
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">31 JAN</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+11 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 445
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 645
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 250
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 450
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 500</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 600
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 1, 995</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 1, 995</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+
+<!--TABLE CONTENT END-->
+
+<!--TABLE END-->
+
+<!--TABLE START-->
+
+<div class="package_table">
+
+<div class="package_header">
+
+<div class="left_text">
+
+<div class="packageHeader_text_new">UMRAH FEBRUARY
+</div>
+<div class="clr"></div>
+<div class="packageHeader_text2"><em>** Umrah visa tertakluk kepada kelulusan dari kedutaan Arab Saudi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>*Awal Madinah</strong></em>
+
+</div>
+</div>
+
+
+<div class="package_logo">
+<img src="images/singapore_airlines_logo.jpg" height="60px" />
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+</div>
+
+<div class="table_box">
+
+<div class="table_box1">
+<div class="table_box1_font">
+Departure / Berlepas
+</div>
+</div>
+
+<div class="table_box2">
+<div class="table_box2_font">
+Pakej / Hari
+</div>
+</div>
+
+<div class="table_box3">
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Bilik berdua
+</div>
+</div>
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Bilik bertiga
+</div>
+</div>
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Kanak kanak dengan katil
+</div>
+</div>
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Kanak kanak tanpa katil
+</div>
+</div>
+
+<div class="clr"></div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+</div>
+
+<div class="table_box4">
+<div class="table_box4_font">
+Balance seats
+</div>
+</div>
+
+<div class="clr"></div>
+</div>
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">* 9 FEB</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+12 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 595
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 795
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 400
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 600
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 650
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 750
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+
+<!--TABLE CONTENT END-->
+
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">19 FEB</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+11 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 445
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 645
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 250
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 450
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 500</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 600
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 1, 995 </div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">$ 1, 995 </div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+<!--TABLE CONTENT END-->
+
+<!--TABLE END-->
+
+<!--TABLE START-->
+
+<div class="package_table">
+
+<div class="package_header">
+
+<div class="left_text">
+
+<div class="packageHeader_text_new">UMRAH MARCH
+</div>
+<div class="clr"></div>
+<div class="packageHeader_text2"><em>** Umrah visa tertakluk kepada kelulusan dari kedutaan Arab Saudi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>*Awal Madinah</strong></em>
+
+</div>
+</div>
+
+
+<div class="package_logo">
+<img src="images/singapore_airlines_logo.jpg" height="60px" />
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+</div>
+
+<div class="table_box">
+
+<div class="table_box1">
+<div class="table_box1_font">
+Departure / Berlepas
+</div>
+</div>
+
+<div class="table_box2">
+<div class="table_box2_font">
+Pakej / Hari
+</div>
+</div>
+
+<div class="table_box3">
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Bilik berdua
+</div>
+</div>
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Bilik bertiga
+</div>
+</div>
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Kanak kanak dengan katil
+</div>
+</div>
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Kanak kanak tanpa katil
+</div>
+</div>
+
+<div class="clr"></div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+</div>
+
+<div class="table_box4">
+<div class="table_box4_font">
+Balance seats
+</div>
+</div>
+
+<div class="clr"></div>
+</div>
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">*2 MAR</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+12 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 595
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 795
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 400
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 600
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 650
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 750
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+
+<!--TABLE CONTENT END-->
+
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">12 MAR</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+11 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 445
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 645
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 250
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 450
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 500
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 600
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+
+<!--TABLE CONTENT END-->
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">14 MAR</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+11 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 445
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 645
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 250
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 450
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 500
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 600
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+
+<!--TABLE CONTENT END-->
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">16 MAR</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+9 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 195
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 345
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 045
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 175
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 350
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 445
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+
+<!--TABLE CONTENT END-->
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">19 MAR</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+11 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 445
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 645
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 250
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 450
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 500
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 600
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+
+<!--TABLE CONTENT END-->
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">21 MAR</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+11 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 445
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 645
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 250
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 450
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 500
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 600
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+
+<!--TABLE CONTENT END-->
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">*23 MAR</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+14 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 895
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 4, 095	
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 700
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 900
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 800
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 900
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+
+<!--TABLE CONTENT END-->
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">*26 MAR</font></a>	
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+13 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 745
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 945
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 550
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 750
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 800
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 900	
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+
+<!--TABLE CONTENT END-->
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">*30 MAR</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+16 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 4, 195
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 4, 495
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 950
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 4, 250
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 850
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 000
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+
+<!--TABLE CONTENT END-->
+
+<!--TABLE END-->
+
+<!--TABLE START-->
+
+<div class="package_table">
+
+<div class="package_header">
+
+<div class="left_text">
+
+<div class="packageHeader_text_new">UMRAH APRIL
+</div>
+<div class="clr"></div>
+<div class="packageHeader_text2"><em>** Umrah visa tertakluk kepada kelulusan dari kedutaan Arab Saudi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>*Awal Madinah</strong></em>
+
+</div>
+</div>
+
+
+<div class="package_logo">
+<img src="images/singapore_airlines_logo.jpg" height="60px" />
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+</div>
+
+<div class="table_box">
+
+<div class="table_box1">
+<div class="table_box1_font">
+Departure / Berlepas
+</div>
+</div>
+
+<div class="table_box2">
+<div class="table_box2_font">
+Pakej / Hari
+</div>
+</div>
+
+<div class="table_box3">
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Bilik berdua
+</div>
+</div>
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Bilik bertiga
+</div>
+</div>
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Kanak kanak dengan katil
+</div>
+</div>
+
+<div class="inner_table_box">
+<div class="inner_table_box_font">
+Kanak kanak tanpa katil
+</div>
+</div>
+
+<div class="clr"></div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+<div class="inner_table_box2">
+<div class="inner_table_box2_font">
+Sarapan pagi sahaja
+</div>
+</div>
+
+<div class="inner_table_box2">
+<div class="inner_table_box3_font">
+Fullboard
+</div>
+</div>
+
+
+</div>
+
+<div class="table_box4">
+<div class="table_box4_font">
+Balance seats
+</div>
+</div>
+
+<div class="clr"></div>
+</div>
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">*6 APR</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+14 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 895
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 4, 095
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 700
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 900
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 800
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 900
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+
+<!--TABLE CONTENT END-->
+
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">*13 APR</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+12 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 595
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 795
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 400
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 600
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 650
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 750
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+<!--TABLE CONTENT END-->
+
+<!--TABLE CONTENT START-->
+
+<div class="table_content">
+
+<div class="table_content1">
+<div class="table_content1_text">
+<a href="#" style="text-decoration:none"><font color="#FFFFFF">23 APR</font></a>
+</div>
+</div>
+
+<div class="table_content2">
+<div class="table_content2_text">
+11 HARI
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 445
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 645
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 250
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 3, 450
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 500
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 2, 600
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content3">
+<div class="table_content3_text">
+$ 1, 995
+</div>
+</div>
+
+<div class="table_content4">
+<div class="table_content4_text">
+&nbsp;
+</div>
+</div>
+
+<div class="info">
+<div class="info_text">
+<a href="#" style="text-decoration:none"><font color="#fead00">INFO</font></a>
+</div>
+</div>
+
+</div>
+
+<!--TABLE CONTENT END-->
+
+<!--TABLE END-->
+
+<!--PENGINAPAN START-->
+
+<div class="penginapan_header">
+<strong>PENGINAPAN DI MAKKAH</strong>
+</div>
+
+<div class="penginapan_header2">
+<strong>PENGINAPAN DI MADINAH</strong>
+</div>
+
+<div class="clr"></div>
+
+<div class="penginapan_block1">
+<a class="fancybox-effects-a" href="images/mekahhilton.jpg" title="Mekkah Hilton"><img src="images/mekahhilton.jpg" width="462px" /></a>
+</div>
+
+<div class="penginapan_block2">
+<a class="fancybox-effects-a" href="images/green.jpg" title="Green Palace"><img src="images/green.jpg" width="224px" /></a>
+</div>
+
+<div class="penginapan_block2">
+<a class="fancybox-effects-a" href="images/radisson.jpg" title="Radisson"><img src="images/radisson.jpg" width="224px" /></a>
+</div>
+
+<div class="clr"></div>
+
+<div class="penginapan_footer">
+Makkah Hilton
+</div>
+
+<div class="penginapan_footer2">
+Green Palace
+</div>
+
+<div class="penginapan_footer2">
+Radisson Blu
+</div>
+
+<div class="clr"></div>
+
+<div class="upgrade_hotel">
+<strong>ANDA JUGA BOLEH <em>UPGRADE</em> HOTEL-HOTEL SEPERTI BERIKUT</strong>
+</div>
+
+<div class="upgrade_header1">
+<strong>HOTEL DI MAKKAH</strong>
+</div>
+
+<div class="upgrade_header3">
+<strong>HOTEL DI MADINAH</strong>
+</div>
+
+<div class="clr"></div>
+
+<div class="upgrade_block1">
+<a class="fancybox-effects-a" href="images/HotelDarImanA.jpg" title="Mekkah Hilton"><img src="images/HotelDarImanA.jpg" width="124px" height="128px" /></a>
+</div>
+
+<div class="upgrade_block2">
+<a class="fancybox-effects-a" href="images/SafwahHotel.jpg" title="Mekkah Hilton"><img src="images/SafwahHotel.jpg" width="124px" /></a>
+</div>
+
+<div class="upgrade_block2">
+<a class="fancybox-effects-a" href="images/MarwaRayhaan.jpg" title="Mekkah Hilton"><img src="images/MarwaRayhaan.jpg" width="124px" height="128px" /></a>
+</div>
+
+<div class="upgrade_block2">
+<a class="fancybox-effects-a" href="images/dar-al-tawhid-intercontinen.jpg" title="Mekkah Hilton"><img src="images/dar-al-tawhid-intercontinen.jpg" width="124px" height="128px" /></a>
+</div>
+
+<div class="upgrade_block2">
+<a class="fancybox-effects-a" href="images/RafflesMakkahPalace.jpg" title="Mekkah Hilton"><img src="images/RafflesMakkahPalace.jpg" width="124px" height="128px" /></a>
+</div>
+
+<div class="upgrade_block3">
+<a class="fancybox-effects-a" href="images/OberoiMadina.jpg" title="Mekkah Hilton"><img src="images/OberoiMadina.jpg" width="122px" height="128px" /></a>
+</div>
+
+<div class="upgrade_block2">
+<a class="fancybox-effects-a" href="images/MadinahHilton.jpg" title="Mekkah Hilton"><img src="images/MadinahHilton.jpg" width="124px" height="128px" /></a>
+</div>
+
+<div class="clr"></div>
+
+<div class="upgrade_footer1">
+Royal Dar AlEiman
+</div>
+
+<div class="upgrade_footer2">
+Al Safwa
+</div>
+
+<div class="upgrade_footer2">
+Al Marwa Rayhaan
+</div>
+
+<div class="upgrade_footer2">
+Dar Tawhid
+</div>
+
+<div class="upgrade_footer2">
+Raffles Makkah
+
+</div>
+
+<div class="upgrade_footer3">
+Oberoi Madinah
+</div>
+
+<div class="upgrade_footer2">
+Madinah Hilton
+</div>
+
+<div class="clr"></div>
+
+<!--PENGINAPAN END-->
+
+<div class="note">
+Note:<br />
+-	 Harga pakej adalah tertakluk kepada perubahan harga penginapan & harga pesawat serta cukai.<br />
+-	 Tarikh dan aturcara perjalanan tertakluk kepada perubahan<br />
+-	 Kelulusan visa Umrah tertakluk kepada pihak kedutaan Arab Saudi<br />
+-	 Pakej Umrah tidak termasuk insuran perjalanan.<br />
+</div>
+
+<div class="clr"></div>
+
+<div id="aaron">
+<img src="images/aaron.gif" />
+</div>
+
+<div class="photosnack">
+<object data="http://files.photosnack.net/app/swf/EmbedCanvas.swf?v=3&amp;hash_id=6321f007ef7106e4eb5334eda1189388&amp;t=1310091794" height="371" id="embededPhotosnackFlash_6321f007ef7106e4eb5334eda1189388" type="application/x-shockwave-flash" width="281"><param name="movie" value="http://files.photosnack.net/app/swf/EmbedCanvas.swf?v=3&amp;hash_id=6321f007ef7106e4eb5334eda1189388&amp;t=1310091794" /><param name="allowFullScreen" value="true" /><param name="flashvars" value="random=true" /><param name="bgcolor" value="#000000" /></object></div>
+
+</div>
+
+</div>
+<div class="clr"></div>
+
+<!--CONTENT END-->
+
+
+<!--FOOTER START-->
+
+<div id="sub_footer">
+
+<div class="footerMenu_block">
+<div class="title">UMRAH & HAJI</div>
+<div class="nd_title">&nbsp;Umrah</div>
+<div class="rd_title"><a href="umrahpackage.html" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Package Umrah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Rooming List</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Umrah Movement</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Umrah Course</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Hotel Jemaah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Wisata</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Umrah Gallery</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Register Umrah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Testimonial Umrah</font></a></div>
+
+<div class="nd_title">&nbsp;Haji</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Package Haji</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Rooming List</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Haji Course</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Register Haji</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Testimonial Haji</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Hajj Movement</font></a></div>
+</div>  
+
+<div class="footerMenu_block2">
+
+<div class="title">&nbsp;</div>
+<div class="nd_title">&nbsp;Baitulmaqdis</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Keistimewaan Baitulmaqdis</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Kenapa kita perlu ziarah Baitulmaqdis?</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Umat Islam digesa ziarah Baitulmaqdis</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Video Baitulmaqdis</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title">&nbsp;</div>
+<div class="title">GO EASY HOLIDAY</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Packages</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Testimonial</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Gallery Holiday</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Register</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title"><a href="http://www.easytickets.com.sg/" style="text-decoration:none"><font color="#FFFFFF">EASY TICKETS</font></a></div>
+<div class="title">&nbsp;</div>
+<div class="title"><a href="http://honeymoonparadise.com.sg/" style="text-decoration:none"><font color="#FFFFFF">HONEYMOON</font></a></div>
+
+</div>
+
+<div class="footerMenu_block2">
+
+<div class="title">SINGAPORE INBOUND</div>
+
+<div class="rd2_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;2 To Go</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Group</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title"><a href="http://www.perjalanansuci.com/" style="text-decoration:none"><font color="#FFFFFF">PERJALANAN SUCI</font></a></div>
+<div class="title">&nbsp;</div>
+<div class="title">BADAL HAJI</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Keistimewaan badal Haji</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Pendaftaran badal Haji</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title">AQIQAH & QURBAN</div>
+<div class="nd_title">&nbsp;Aqiqah</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Maksud Aqiqah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Pendaftaran Aqiqah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Asal Usul Korban</font></a></div>
+<div class="nd_title">&nbsp;Korban</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Panduan ibadah korban</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Pendaftaran korban</font></a></div>
+</div>
+
+<div class="footerMenu_block2">
+
+<div class="title"><a href="http://www.stntinternational.com/" style="text-decoration:none"><font color="#FFFFFF">ST & T</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title"><a href="http://www.singaporehajjnews.com/" style="text-decoration:none"><font color="#FFFFFF">SINGAPORE HAJJ NEWS</font></a></div>
+<div class="title">&nbsp;</div>
+<div class="title">ABOUT US</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Company Profile</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Pengasas Shahidah Travel</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;What others say</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Call us</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;</font></a></div>
+<div class="title"><a href="index.html" style="text-decoration:none"><font color="#FFFFFF">HOME</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;</font></a></div>
+<div class="rd_title"><font color="#FFFFFF" style="font-size:11px">390 Victoria Street, #01-26/30 Golden Landmark<br />
+Singapore 188061<br />
+Tel: (+65) 6299 2345 (Haj/Umrah) / <br />
+(+65) 6291 4555 (Tours/Ticketing)<br />
+Fax: (65) 6299 1235<br />
+Email: enquiry@shahidahtravel.com<br /></font></div>
+</div>
+  
+</div>
+
+
+<div id="footer">
+ <div id="footer_text"> Copyright 2013 All Rights Reserved. Di Bangunkan oleh: Shahidah Travel & Tours Pte Ltd</div>
+</div>
+</div>
+<center>
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'ms', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</center>
+</body>
+</html>

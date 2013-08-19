@@ -1,0 +1,558 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Shahidah Travel & Tours Pte Ltd</title>
+<meta name="keywords" content="shahidah travel, Umrah & Haji, Go Easy Holiday, Easy Ticket, Honeymoon, Singapore Inbound, Badal Haji, Aqiqah&Korban, Perjalanan Suci, Singapore Hajj News, ST&T" />
+<meta name="description" content="Mesra & Amanah" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-translate-customization" content="4f319f2e9f5d3e1b-04a7941baa3ff161-gfb4d96411305c17f-17"></meta>
+
+<link rel="stylesheet" href="css/styles.css" type="text/css" />
+<link rel="stylesheet" href="css/hoteljemaah.css" type="text/css" />
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="lib/jquery-1.10.1.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 2
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			/*
+			 *  Open manually
+			 */
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+		});
+	</script>
+	<style type="text/css">
+		.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #222;
+		}
+
+		
+	</style>
+    <style type="text/css">
+	
+	.style2 {color: #000000}
+.style3 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style8 {
+	color: #FFFFFF;
+	font-size: 12px;
+}
+.style9 {
+	color: #000;
+	font-size: 20px;
+	font-weight: bold;
+}
+.style10 {
+	color: #060;
+	font-size: 18px;
+	font-weight: bold;
+}
+.style11 {
+	color: #930;
+	font-size: 16px;
+	font-weight: bold;
+}
+.style12 {
+	color: #000;
+	font-size: 12px;
+
+}
+</style>
+	
+	
+	
+</head>
+
+<body>
+<div id="pageWrapper">
+
+<!--HEADER START-->
+<div id="header">
+
+
+<div id="logo"><a href="index.html"><img src="images/logo.png" width="175px" /></a></div>
+<div id="box">
+<div id="social_button"><a href="https://www.facebook.com/masyarakat.shahidah"><img src="images/facebook.png" width="40px" /></a>&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/shahidahtravel"><img src="images/twitter.png" width="40px" /></a></div>
+<div class="clr"></div>
+<div class="button2">&nbsp;</div>
+<div class="button"><a class="fancybox fancybox.iframe" href="feedback.html"><img src="images/feedback2.png" width="120px" /></a></div>
+<div class="button"><a class="fancybox fancybox.iframe" href="newsletter.html"><img src="images/newsletter.png" width="120px" /></a></div>
+</div>
+<div id="header_text">390 Victoria Street, #01-26/30 Golden Landmark<br />
+Singapore 188061<br />
+Tel: (+65) 6299 2345 (Haj/Umrah) / <br />
+(+65) 6291 4555 (Tours/Ticketing)<br />
+Fax: (65) 6299 1235<br />
+Email: enquiry@shahidahtravel.com<br />
+</div>
+<div id="qr_code"><img src="images/qrcode.png" width="100px" /></div>
+
+</div>
+<div class="clr"></div>
+
+<!--HEADER END-->
+
+
+<!--MENU START-->
+
+<div id="nav">
+
+<ul id="menu">
+    <li><a href="index.html"><img src="images/home.jpg" width="199px" /></a></li>
+    
+    <li><a href="#"><img src="images/umrahnhaji.jpg" width="199px" /></a>
+        <ul>
+        
+        	<li><a href="#"><img src="images/umrah.png" width="199px" /></a></li>
+                
+                    <li><a href="#"><img src="images/packageumrah.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/roominglist.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/umrahmove.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/umrahcourse.png" width="199px" /></a></li>
+                    <li><a href=""><img src="images/hoteljemaah.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/wisata.png" width="199px" /></a></li>
+                    <li><a href="umrahgallery.html"><img src="images/umrahgallery.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/registerumrah.png" width="199px" /></a></li>
+                    <li><a href="#"><img src="images/testimonialumrah.png" width="199px" /></a></li>
+             	
+            
+            
+            <li><a href="#"><img src="images/haji.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/packagehaji.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/hajirooming.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/hajicourse.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/registerhaji.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/testimonialhaji.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/hajimovement.png" width="199px" /></a></li>
+            
+            <li><a href="#"><img src="images/baitulmaqdis.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/keistimewaanbaitulmaqdis.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/kenapa.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/umatislam.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/video.png" width="199px" /></a></li>
+        </ul>
+    </li>
+    <li><a href="#"><img src="images/goeasy.jpg" width="199px" /></a>
+        <ul>
+            <li><a href="#"><img src="images/goeasy-packages.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/testimonial-easy.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/galleryholiday.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/goeasy-register.png" width="199px" /></a></li>
+            
+        </ul>
+    </li>
+    <li><a href="http://www.easytickets.com.sg/"><img src="images/easytickets.jpg" width="199px" /></a>
+        
+    </li>
+    <li><a href="http://honeymoonparadise.com.sg/"><img src="images/honeymoon.jpg" width="199px" /></a>
+        
+    </li>
+    <li><a href="#"><img src="images/singaporeinbound.jpg" width="199px" height="37" /></a>
+        
+        <ul>
+            <li><a href="#"><img src="images/2togo.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/sgboundgroup.png" width="199px" height="37" /></a></li>
+                    
+        </ul>
+        
+    </li>
+     
+ 
+    <li><a href="http://www.perjalanansuci.com/"><img src="images/perjalanansuci.jpg" width="199px" height="37" /></a>
+        
+    </li>
+    
+    <li><a href="#"><img src="images/badalhaji.jpg" width="199px" height="37" /></a>
+        <ul>        	
+            <li><a href="#"><img src="images/keistimewaanbadal.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/pendaftaranbadal.png" width="199px" /></a></li>
+        </ul>
+    </li>
+    
+     <li><a href="#"><img src="images/aqiqahnqurban.jpg" width="199px" height="37" /></a>
+        <ul>
+            <li><a href="#"><img src="images/aqiqah.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/maksudaqiqah.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/pendaftaranaqiqah.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/asalusulqurban.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/qurban.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/panduanqurban.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/pendaftaranqurban.png" width="199px" /></a></li>
+        </ul>
+    </li>
+    
+     <li><a href="http://www.stntinternational.com/"><img src="images/stnt.jpg" width="199px" height="37" /></a>
+        
+    </li>
+    
+    <li><a href="http://www.singaporehajjnews.com/"><img src="images/singhajinews.jpg" width="199px" height="37" /></a>
+        
+    </li>
+    
+    <li><a href="#"><img src="images/aboutus.jpg" width="199px" height="37" /></a>
+        <ul>
+            <li><a href="#"><img src="images/companyprofile.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/pengasas.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/otherssay.png" width="199px" /></a></li>
+            <li><a href="#"><img src="images/callus.png" width="199px" /></a></li>        
+        </ul>
+    </li>   
+    
+</ul>
+
+</div>
+
+<!--MENU END-->
+
+<div class="clr"></div>
+<!--CONTENT START-->
+<div id="content">
+<div id="package">
+<div class="article">
+<font style="color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; font-size:16px;">
+
+<h3>About Us</h3>
+
+<strong>Shahidah Travel</strong> is moving strong ahead to be identified as a fully committed travel agency to meet the daily needs of a progressive Muslim. Those who want to achieve success in life yet want to go on a journey of purity.
+<p></p>
+With ST&T International, a company run by Shahidah Travel, we have a division named Perjalanan Suci or Journey of Purity providing information & services for anyone to lead a successful Muslim life. It also provide takaful & islamic banking facilities in association with UOI and Maybank.
+<p></p>
+We have almost completed the total facilities for any Muslim who doesn't want to be involve in riba' or anything haram in food. We have a long list of all the approved halal restaurants in Singapore and we can also provide information everywhere in the world to genuine enquiry.
+<p></p>
+For Haj/Umrah is a total commitment to the guest of Allah. We went to every details, even to provide them the best packages, bags, books, no of religious teachers to guide them, the best accommodations near to Haram at a reasonable price. We believe we are among those few who really go details in Haj services.
+<p></p>
+For international tours, we covered almost all over the world. We're able to provide halal food in restaurants or 'ready-to-eat meal packs'. We assure you prayers time and mosque information easily available. We pray to Allah s.w.t that we are able to maintain the sunnah Nabi Muhammad s.a.w and Allah s.w.t always gives us his guidance & forgiveness in any of our errors as a human being. Always full of weaknesses.
+<p></p>
+To all our fans and supporters, thank you very much for your kind patrionage. Please be free to send us email to guide us to be the best that we can be.
+<p></p>
+We are looking for overseas partners who would like to invest in our organization or like to invest in our products or anything in the name of business. We are ready to listen to you. Just email me at ayoob@shahidahtravel.com
+<p></p>
+Sincerely from us,<br />
+<strong>
+Ayoob Angullia & Hamidah Abd Hamid<br />
+Managing Directors of Shahidah Travel
+</strong>
+</font>
+</div>
+
+<div class="article_picture">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<img src="images/Ayoob&Hamidah2.jpg" /><br />
+<p></p>
+<font style="color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; font-size:16px;">
+<strong>
+Ayoob Angullia & Hamidah Abd Hamid<br /> Managing Directors of <br />Shahidah Travel & Tours Pte Ltd
+</strong>
+<p></p>
+<a href="http://www.shahidahtravel.com/public/images/AYOOB/Rencana%20Cik%20Ayoob%20(with%20pics).pdf">See more</a> about HJ. Ayoob<br /> Achievement & Contribution
+</font>
+</div>
+
+</div>
+</div>
+<div class="clr"></div>
+
+<!--CONTENT END-->
+
+<!--FOOTER START-->
+
+<div id="sub_footer">
+
+<div class="footerMenu_block">
+<div class="title">UMRAH & HAJI</div>
+<div class="nd_title">&nbsp;Umrah</div>
+<div class="rd_title"><a href="umrahpackage.html" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Package Umrah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Rooming List</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Umrah Movement</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Umrah Course</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Hotel Jemaah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Wisata</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Umrah Gallery</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Register Umrah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Testimonial Umrah</font></a></div>
+
+<div class="nd_title">&nbsp;Haji</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Package Haji</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Rooming List</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Haji Course</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Register Haji</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Testimonial Haji</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Hajj Movement</font></a></div>
+</div>  
+
+<div class="footerMenu_block2">
+
+<div class="title">&nbsp;</div>
+<div class="nd_title">&nbsp;Baitulmaqdis</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Keistimewaan Baitulmaqdis</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Kenapa kita perlu ziarah Baitulmaqdis?</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Umat Islam digesa ziarah Baitulmaqdis</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Video Baitulmaqdis</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title">&nbsp;</div>
+<div class="title">GO EASY HOLIDAY</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Packages</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Testimonial</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Gallery Holiday</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Register</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title"><a href="http://www.easytickets.com.sg/" style="text-decoration:none"><font color="#FFFFFF">EASY TICKETS</font></a></div>
+<div class="title">&nbsp;</div>
+<div class="title"><a href="http://honeymoonparadise.com.sg/" style="text-decoration:none"><font color="#FFFFFF">HONEYMOON</font></a></div>
+
+</div>
+
+<div class="footerMenu_block2">
+
+<div class="title">SINGAPORE INBOUND</div>
+
+<div class="rd2_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;2 To Go</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Group</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title"><a href="http://www.perjalanansuci.com/" style="text-decoration:none"><font color="#FFFFFF">PERJALANAN SUCI</font></a></div>
+<div class="title">&nbsp;</div>
+<div class="title">BADAL HAJI</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Keistimewaan badal Haji</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Pendaftaran badal Haji</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title">AQIQAH & QURBAN</div>
+<div class="nd_title">&nbsp;Aqiqah</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Maksud Aqiqah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Pendaftaran Aqiqah</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Asal Usul Korban</font></a></div>
+<div class="nd_title">&nbsp;Korban</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Panduan ibadah korban</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Pendaftaran korban</font></a></div>
+</div>
+
+<div class="footerMenu_block2">
+
+<div class="title"><a href="http://www.stntinternational.com/" style="text-decoration:none"><font color="#FFFFFF">ST & T</font></a></div>
+
+<div class="title">&nbsp;</div>
+<div class="title"><a href="http://www.singaporehajjnews.com/" style="text-decoration:none"><font color="#FFFFFF">SINGAPORE HAJJ NEWS</font></a></div>
+<div class="title">&nbsp;</div>
+<div class="title">ABOUT US</div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Company Profile</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Pengasas Shahidah Travel</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;What others say</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Call us</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;</font></a></div>
+<div class="title"><a href="index.html" style="text-decoration:none"><font color="#FFFFFF">HOME</font></a></div>
+<div class="rd_title"><a href="#" style="text-decoration:none"><font color="#FFFFFF">&nbsp;</font></a></div>
+<div class="rd_title"><font color="#FFFFFF" style="font-size:11px">390 Victoria Street, #01-26/30 Golden Landmark<br />
+Singapore 188061<br />
+Tel: (+65) 6299 2345 (Haj/Umrah) / <br />
+(+65) 6291 4555 (Tours/Ticketing)<br />
+Fax: (65) 6299 1235<br />
+Email: enquiry@shahidahtravel.com<br /></font></div>
+</div>
+  
+</div>
+
+
+<div id="footer">
+ <div id="footer_text"> Copyright 2013 All Rights Reserved. Di Bangunkan oleh: Shahidah Travel & Tours Pte Ltd</div>
+</div>
+</div>
+<center>
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'ms', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</center>
+</body>
+</html>

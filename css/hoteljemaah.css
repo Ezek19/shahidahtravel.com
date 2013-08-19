@@ -1,0 +1,225 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* UPGRADE HOTEL START */
+
+#package {
+	display:block;
+	width:1200px;
+	background-color:#21221d;
+		
+	float:left;	
+	margin-top:2px;
+	padding-bottom:55px;
+}
+
+.h1 {
+		float:left;
+		margin:35px 0 10px 130px;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:24px;
+		color:#FC0;	
+}
+
+
+.upgrade_hotel {
+	display:block;
+	float:left;
+	margin:45px 2px 0 130px;
+	width:940px;
+	height:auto;
+	background-color:#a5330b;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#FC0;	
+	text-align:center;	
+	padding:5px;
+}
+
+.upgrade_header1 {
+	display:block;
+	float:left;
+	margin:16px 0 0 130px;
+	width:668px;
+	height:auto;
+	background-color:#a5330b;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#fff;	
+	text-align:center;	
+	padding:5px;
+}
+
+.upgrade_header2 {
+	display:block;
+	float:left;
+	margin:16px 0 0 4px;
+	width:260px;
+	height:auto;
+	background-color:#a5330b;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;	
+	color:#fff;
+	text-align:center;	
+	padding:5px;
+}
+
+.upgrade_header3 {
+	display:block;
+	float:left;
+	margin:16px 0 0 4px;
+	width:258px;
+	height:auto;
+	background-color:#a5330b;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;	
+	color:#FFF;
+	text-align:center;	
+	padding:5px;
+}
+
+.upgrade_header4 {
+	display:block;
+	float:left;
+	margin:16px 0 0 130px;
+	width:940px;
+	height:auto;
+	background-color:#a5330b;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;	
+	color:#FFF;
+	text-align:center;	
+	padding:5px;
+}
+
+
+.upgrade_block1{
+	display:block;
+	float:left;
+	margin:1px 0 0 130px;
+	width:145px;
+	height:auto;
+	background-color:#a5330b;		
+	padding:5px;
+}
+
+.upgrade_block2{
+	display:block;
+	float:left;
+	margin:1px 0 0 2px;
+	width:147px;
+	height:auto;
+	background-color:#a5330b;		
+	padding:5px;
+}
+
+.upgrade_block3{
+	display:block;
+	float:left;
+	margin:1px 0 0 4px;
+	width:122px;
+	height:auto;
+	background-color:#a5330b;		
+	padding:5px;
+}
+
+.upgrade2nd1{
+	display:block;
+	float:left;
+	margin:1px 0 0 130px;
+	width:225px;
+	height:auto;
+	background-color:#a5330b;		
+	padding:5px;
+}
+
+.upgrade2nd2{
+	display:block;
+	float:left;
+	margin:1px 0 0 2px;
+	width:226px;
+	height:auto;
+	background-color:#a5330b;		
+	padding:5px;
+}
+
+
+.upgrade_footer1{
+	display:block;
+	float:left;
+	margin:1px 0 0 130px;
+	width:145px;
+	height:auto;
+	background-color:#a5330b;		
+	padding:5px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;	
+	color:#FFF;
+	text-align:center;		
+}
+
+.upgrade_footer2{
+	display:block;
+	float:left;
+	margin:1px 0 0 2px;
+	width:147px;
+	height:auto;
+	background-color:#a5330b;		
+	padding:5px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;	
+	color:#FFF;
+	text-align:center;	
+}
+
+.upgrade_footer3{
+	display:block;
+	float:left;
+	margin:1px 0 0 4px;
+	width:122px;
+	height:auto;
+	background-color:#a5330b;		
+	padding:5px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;	
+	color:#FFF;
+	text-align:center;
+}
+
+.upgrade2nd_footer1{
+	display:block;
+	float:left;
+	margin:1px 0 0 130px;
+	width:225px;
+	height:auto;
+	background-color:#a5330b;		
+	padding:5px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;	
+	color:#FFF;
+	text-align:center;		
+}
+
+.upgrade2nd_footer2{
+	display:block;
+	float:left;
+	margin:1px 0 0 2px;
+	width:226px;
+	height:auto;
+	background-color:#a5330b;		
+	padding:5px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;	
+	color:#FFF;
+	text-align:center;	
+}
+
+/* UPGRADE HOTEL END */
+.flyer {
+	display:block;
+	width:945px;
+	padding:25px 0;
+	background:#a5330b;
+	margin: 15px 0 15px 130px;	
+	float:left;
+}
